@@ -9,37 +9,37 @@ namespace JavaWaterSport.Model
     [Serializable]
     class Kund
     {
-        private int m_id;
-        private string m_personalId;
-        private string m_name;
+        private int k_id;
+        private string k_personligId;
+        private string k_namn;
 
-        public string Name
+        public string Namn
         {
-            get {return m_name;}
-            set { m_name = value; }
+            get {return k_namn;}
+            set { k_namn = value; }
         }
 
-        public string PersonalID
+        public string PersonaligID
         {
-            get { return m_personalId; }
-            set { m_personalId = value; }
+            get { return k_personligId; }
+            set { k_personligId = value; }
         }
 
         public int ID
         {
-            get { return m_id; }
-            set { m_id = value; }
+            get { return k_id; }
+            set { k_id = value; }
         }
 
-        public Kund(string personalID, string name)
+        public Kund(string personligID, string name)
         {
-            this.m_name = name;
-            this.m_personalId = personalID;
+            this.k_namn = name;
+            this.k_personligId = personligID;
         }
 
         public override string ToString()
         {
-            return m_personalId + " | " + m_name;
+            return k_personligId + " | " + k_namn;
         }
     }
 }
