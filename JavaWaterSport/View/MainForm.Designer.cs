@@ -44,6 +44,9 @@
             this.registreraNyKundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bokaDykarkursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hyrUtrustningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sparaDykarkurserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sparaUtrustningarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sparaKunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +68,8 @@
             this.listaAllaDykarkurserIBiblioteketToolStripMenuItem,
             this.listaAllaTillgängligaDykarkurserToolStripMenuItem,
             this.läggTillNyDykarkursToolStripMenuItem,
-            this.läggTillNyKopiaAvEnDykarkursToolStripMenuItem});
+            this.läggTillNyKopiaAvEnDykarkursToolStripMenuItem,
+            this.sparaDykarkurserToolStripMenuItem});
             this.dykarkurserToolStripMenuItem.Name = "dykarkurserToolStripMenuItem";
             this.dykarkurserToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.dykarkurserToolStripMenuItem.Text = "Dykarkurser";
@@ -73,26 +77,26 @@
             // listaAllaDykarkurserIBiblioteketToolStripMenuItem
             // 
             this.listaAllaDykarkurserIBiblioteketToolStripMenuItem.Name = "listaAllaDykarkurserIBiblioteketToolStripMenuItem";
-            this.listaAllaDykarkurserIBiblioteketToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.listaAllaDykarkurserIBiblioteketToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
             this.listaAllaDykarkurserIBiblioteketToolStripMenuItem.Text = "Visa alla dykarkurser i biblioteket";
             // 
             // listaAllaTillgängligaDykarkurserToolStripMenuItem
             // 
             this.listaAllaTillgängligaDykarkurserToolStripMenuItem.Name = "listaAllaTillgängligaDykarkurserToolStripMenuItem";
-            this.listaAllaTillgängligaDykarkurserToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.listaAllaTillgängligaDykarkurserToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
             this.listaAllaTillgängligaDykarkurserToolStripMenuItem.Text = "Visa alla tillgängliga dykarkurser ";
             // 
             // läggTillNyDykarkursToolStripMenuItem
             // 
             this.läggTillNyDykarkursToolStripMenuItem.Name = "läggTillNyDykarkursToolStripMenuItem";
-            this.läggTillNyDykarkursToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.läggTillNyDykarkursToolStripMenuItem.Text = "Lägg till ny dykarkurs";
+            this.läggTillNyDykarkursToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.läggTillNyDykarkursToolStripMenuItem.Text = "Lägg till en ny dykarkurs";
             // 
             // läggTillNyKopiaAvEnDykarkursToolStripMenuItem
             // 
             this.läggTillNyKopiaAvEnDykarkursToolStripMenuItem.Name = "läggTillNyKopiaAvEnDykarkursToolStripMenuItem";
-            this.läggTillNyKopiaAvEnDykarkursToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.läggTillNyKopiaAvEnDykarkursToolStripMenuItem.Text = "Lägg till ny kopia av en dykarkurs";
+            this.läggTillNyKopiaAvEnDykarkursToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.läggTillNyKopiaAvEnDykarkursToolStripMenuItem.Text = "Lägg till en ny kopia av en dykarkurs";
             // 
             // utrustningToolStripMenuItem
             // 
@@ -100,7 +104,8 @@
             this.visaAllTillagdUtrustningToolStripMenuItem,
             this.visaAllTillgängligUtrustningToolStripMenuItem,
             this.läggTillUtrustningToolStripMenuItem,
-            this.läggTillKopiaAvUtrustningToolStripMenuItem});
+            this.läggTillKopiaAvUtrustningToolStripMenuItem,
+            this.sparaUtrustningarToolStripMenuItem});
             this.utrustningToolStripMenuItem.Name = "utrustningToolStripMenuItem";
             this.utrustningToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.utrustningToolStripMenuItem.Text = "Utrustning";
@@ -135,7 +140,8 @@
             this.visaAllaKunderToolStripMenuItem,
             this.registreraNyKundToolStripMenuItem,
             this.bokaDykarkursToolStripMenuItem,
-            this.hyrUtrustningToolStripMenuItem});
+            this.hyrUtrustningToolStripMenuItem,
+            this.sparaKunderToolStripMenuItem});
             this.kunderToolStripMenuItem.Name = "kunderToolStripMenuItem";
             this.kunderToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.kunderToolStripMenuItem.Text = "Kunder";
@@ -163,6 +169,24 @@
             this.hyrUtrustningToolStripMenuItem.Name = "hyrUtrustningToolStripMenuItem";
             this.hyrUtrustningToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.hyrUtrustningToolStripMenuItem.Text = "Hyr utrustning";
+            // 
+            // sparaDykarkurserToolStripMenuItem
+            // 
+            this.sparaDykarkurserToolStripMenuItem.Name = "sparaDykarkurserToolStripMenuItem";
+            this.sparaDykarkurserToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.sparaDykarkurserToolStripMenuItem.Text = "Spara dykarkurser";
+            // 
+            // sparaUtrustningarToolStripMenuItem
+            // 
+            this.sparaUtrustningarToolStripMenuItem.Name = "sparaUtrustningarToolStripMenuItem";
+            this.sparaUtrustningarToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.sparaUtrustningarToolStripMenuItem.Text = "Spara utrustningar";
+            // 
+            // sparaKunderToolStripMenuItem
+            // 
+            this.sparaKunderToolStripMenuItem.Name = "sparaKunderToolStripMenuItem";
+            this.sparaKunderToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.sparaKunderToolStripMenuItem.Text = "Spara kunder";
             // 
             // MainForm
             // 
@@ -198,5 +222,8 @@
         private System.Windows.Forms.ToolStripMenuItem registreraNyKundToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bokaDykarkursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hyrUtrustningToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sparaDykarkurserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sparaUtrustningarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sparaKunderToolStripMenuItem;
     }
 }
