@@ -29,9 +29,7 @@ namespace JavaWaterSport.Model
         /// <param name="inTid">Dykarkurs tid</param>
         /// <param name="inDykinstruktör">Dykarkurs dykinstruktör</param>
         /// <param name="inDatum">Dykarkurs datum</param>
-        public Dykarkurs(int inTid, 
-                         string inDykinstruktör, 
-                         string inDatum)
+        public Dykarkurs(int inTid, string inDykinstruktör, string inDatum)
         {
             this.tid = inTid;
             this.dykinstruktör = inDykinstruktör;
