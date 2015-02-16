@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace JavaWaterSport.Controller
+{
+    class IListor<T>
+    {
+        void Add(T item);
+        void Remove(T item);
+        T Get(int index);
+        int Count();
+        T Find(string strFind);
+        int NextID();
+    }
+}
