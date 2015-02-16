@@ -48,6 +48,8 @@
     <Compile Include="Controller\IListor.cs" />
     <Compile Include="Controller\KundList.cs" />
     <Compile Include="Controller\UtrustningList.cs" />
+    <Compile Include="CustomException\CustomException.cs" />
+    <Compile Include="DAL\BinarySerialization.cs" />
     <Compile Include="Model\Dykarkurs.cs" />
     <Compile Include="Model\Dykarkurs_kopia.cs" />
     <Compile Include="Model\Dykarkurs_boka.cs" />
@@ -111,10 +113,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CustomException\" />
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

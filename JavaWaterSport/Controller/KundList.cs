@@ -3,22 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JavaWaterSport.Model;
 using JavaWaterSport.Service;
-using JavaWaterSport.Controller;
+using JavaWaterSport.DAL;
+using System.IO;
+using JavaWaterSportSystem;
 
 namespace JavaWaterSport.Controller
 {
     class KundList : IListor<Kund>, IService 
     {
         private List<Kund> k_kundList;
+
         public event EventHandler Updated;
-
-        public KundList()
-        {
-            k_kundList = new List<Kund>();
-        }
-
 
         protected void OnUpdated()
         {
@@ -26,85 +22,91 @@ namespace JavaWaterSport.Controller
                 Updated(this, EventArgs.Empty);
         }
 
-        public void Add(Kund item)
+        public KundList()
         {
-            item.setId(NextID());
+            k_kundList = new List<Kund>();
+            try
+            {
+                if (File.Exists("KundLista.DAT"))
+                {
+                    k_kundList = BinarySerialization<List<Kund>>.BinaryDeSerialize("KundLista.DAT");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new CustomException(ex.Message);
+            }
+        }
+
+		public void Add(Kund item)
+		{
+            item.ID = NextID();
             k_kundList.Add(item);
-        }
+            OnUpdated();
+		}
 
-        public void Remove(Kund item)
-        {
-            k_kundList.Remove(item);
-        }
+		public void Remove(Kund item)
+		{
+			throw new NotImplementedException();
+		}
 
-        public Kund Get(int index)
-        {
+		public Kund Get(int index)
+		{
             return k_kundList.ElementAt(index);
-        }
+		}
 
-        public int Count()
-        {
+		public int Count()
+		{
             return k_kundList.Count();
-        }
+		}
+
+		public Kund Find(string strFind)
+		{
+
+            var me = (from kund in k_kundList
+                      where kund.ID.ToString() == strFind
+                      select kund).First();
+
+            return me;
+
+            //for (int i = 0; i < k_kundList.Count(); i++)
+            //{
+            //    if (k_kundList[i].ID.ToString() == strFind)
+            //    {
+            //        return k_kundList[i];
+            //    }
+            //}
+            
+            //return null;
+		}
 
 
-        public Kund FindTitle(string title)
-        {
-            for (int i = 0; i < k_kundList.Count(); i++)
-            {
-                // if (k_kundList[i].getTitle() == title)
-                {
-                    return k_kundList[i];
-                }
-            }
-            return null;
-        }
-
-        public int GetIndexOfTitle(string title)
-        {
-            for (int i = 0; i < k_kundList.Count(); i++)
-            {
-                //if (k_kundList[i].getTitle() == title)
-                {
-                    return i;
-                }
-            }
-            return -1;
-        }
-
-        public void UpdateImagePath(Kund kund, string path)
-        {
-           // kund.setPath(path);
-            k_kundList.Remove(kund);
-            k_kundList.Add(kund);
-        }
-
-        public object toArray()
-        {
-
-            var kunder = from kund in k_kundList
-                         select new
-                         {
-                             //Title = kund.getTitle(),
-                             //Runtime = kund.getTime(),
-                             //Genre = kund.getGenre(),
-                             //Director = kund.getDirector(),
-                             //Age = kund.getAge()
-
-                         };
-
-            return kunder.ToArray();
-        }
-
-
-        public Kund Find(string strFind)
-        {
-            throw new NotImplementedException();
-        }
 
         public int NextID()
         {
             return k_kundList.Count() + 1;
+        }
+
+        /// <summary>
+        /// BinarySerialize is a method in the MemberList class that 
+        /// Serialize (save object from the program into files) using 
+        /// binary serialization.
+        /// </summary>
+        /// <returns>true or cast an exception</returns>
+        public bool BinarySerialize()
+        {
+            try
+            {
+                BinarySerialization<List<Kund>>.FileName = "KundLista.DAT";
+                BinarySerialization<List<Kund>>.BinarySerialize(k_kundList);
+            }
+            catch (Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
+            return true;
         }
     }
 }
