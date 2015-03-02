@@ -72,7 +72,7 @@
             // 
             this.lvwKunder.Location = new System.Drawing.Point(15, 155);
             this.lvwKunder.Name = "lvwKunder";
-            this.lvwKunder.Size = new System.Drawing.Size(354, 202);
+            this.lvwKunder.Size = new System.Drawing.Size(354, 430);
             this.lvwKunder.TabIndex = 3;
             this.lvwKunder.UseCompatibleStateImageBehavior = false;
             // 
@@ -98,7 +98,7 @@
             // 
             this.tbxPersonligID.Location = new System.Drawing.Point(15, 34);
             this.tbxPersonligID.Name = "tbxPersonligID";
-            this.tbxPersonligID.Size = new System.Drawing.Size(100, 20);
+            this.tbxPersonligID.Size = new System.Drawing.Size(251, 20);
             this.tbxPersonligID.TabIndex = 6;
             // 
             // label5
