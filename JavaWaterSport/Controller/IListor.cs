@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JavaWaterSport.Controller
 {
-    class IListor<T>
+    interface IListor<T>
     {
         void Add(T item);
         void Remove(T item);

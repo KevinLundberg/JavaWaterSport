@@ -86,5 +86,6 @@ namespace JavaWaterSport.DAL
             }
 
             return lista;
+        }
     }
 }
