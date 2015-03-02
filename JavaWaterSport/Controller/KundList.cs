@@ -69,16 +69,6 @@ namespace JavaWaterSport.Controller
                       select kund).First();
 
             return me;
-
-            //for (int i = 0; i < k_kundList.Count(); i++)
-            //{
-            //    if (k_kundList[i].ID.ToString() == strFind)
-            //    {
-            //        return k_kundList[i];
-            //    }
-            //}
-            
-            //return null;
 		}
 
 
