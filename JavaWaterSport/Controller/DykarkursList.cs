@@ -61,11 +61,11 @@ namespace JavaWaterSport.Controller
             return null;
         }
 
-        public int GetIndexOfDatum(string title)
+        public int GetIndexOfDatum(string datum)
         {
             for (int i = 0; i < d_dykarkursList.Count(); i++)
             {
-                if (d_dykarkursList[i].getDatum() == title)
+                if (d_dykarkursList[i].getDatum() == datum)
                 {
                     return i;
                 }

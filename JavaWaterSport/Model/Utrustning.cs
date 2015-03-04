@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace JavaWaterSport.Model
 {
+    [Serializable]
     class Utrustning
     {
         // medlemsvariabler       
