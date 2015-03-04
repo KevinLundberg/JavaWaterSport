@@ -34,18 +34,18 @@
             this.listaAllaTillgängligaDykarkurserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.läggTillNyDykarkursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.läggTillNyKopiaAvEnDykarkursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sparaDykarkurserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utrustningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visaAllTillagdUtrustningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visaAllTillgängligUtrustningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.läggTillUtrustningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.läggTillKopiaAvUtrustningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sparaUtrustningarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visaAllaKunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registreraNyKundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bokaDykarkursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hyrUtrustningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sparaDykarkurserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sparaUtrustningarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sparaKunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +98,12 @@
             this.läggTillNyKopiaAvEnDykarkursToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
             this.läggTillNyKopiaAvEnDykarkursToolStripMenuItem.Text = "Lägg till en ny kopia av en dykarkurs";
             // 
+            // sparaDykarkurserToolStripMenuItem
+            // 
+            this.sparaDykarkurserToolStripMenuItem.Name = "sparaDykarkurserToolStripMenuItem";
+            this.sparaDykarkurserToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
+            this.sparaDykarkurserToolStripMenuItem.Text = "Spara dykarkurser";
+            // 
             // utrustningToolStripMenuItem
             // 
             this.utrustningToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -134,6 +140,12 @@
             this.läggTillKopiaAvUtrustningToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.läggTillKopiaAvUtrustningToolStripMenuItem.Text = "Lägg till kopia av utrustning";
             // 
+            // sparaUtrustningarToolStripMenuItem
+            // 
+            this.sparaUtrustningarToolStripMenuItem.Name = "sparaUtrustningarToolStripMenuItem";
+            this.sparaUtrustningarToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.sparaUtrustningarToolStripMenuItem.Text = "Spara utrustningar";
+            // 
             // kunderToolStripMenuItem
             // 
             this.kunderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -151,6 +163,7 @@
             this.visaAllaKunderToolStripMenuItem.Name = "visaAllaKunderToolStripMenuItem";
             this.visaAllaKunderToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.visaAllaKunderToolStripMenuItem.Text = "Visa alla kunder";
+            this.visaAllaKunderToolStripMenuItem.Click += new System.EventHandler(this.visaAllaKunderToolStripMenuItem_Click);
             // 
             // registreraNyKundToolStripMenuItem
             // 
@@ -169,18 +182,6 @@
             this.hyrUtrustningToolStripMenuItem.Name = "hyrUtrustningToolStripMenuItem";
             this.hyrUtrustningToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.hyrUtrustningToolStripMenuItem.Text = "Hyr utrustning";
-            // 
-            // sparaDykarkurserToolStripMenuItem
-            // 
-            this.sparaDykarkurserToolStripMenuItem.Name = "sparaDykarkurserToolStripMenuItem";
-            this.sparaDykarkurserToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
-            this.sparaDykarkurserToolStripMenuItem.Text = "Spara dykarkurser";
-            // 
-            // sparaUtrustningarToolStripMenuItem
-            // 
-            this.sparaUtrustningarToolStripMenuItem.Name = "sparaUtrustningarToolStripMenuItem";
-            this.sparaUtrustningarToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.sparaUtrustningarToolStripMenuItem.Text = "Spara utrustningar";
             // 
             // sparaKunderToolStripMenuItem
             // 

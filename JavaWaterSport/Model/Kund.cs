@@ -20,7 +20,7 @@ namespace JavaWaterSportSystem
             set { namn = value; }
         }
 
-        public string PersonaligID
+        public string PersonligID
         {
             get { return personligId; }
             set { personligId = value; }

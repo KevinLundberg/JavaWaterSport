@@ -51,6 +51,7 @@
             this.btnRegistreraKund.TabIndex = 0;
             this.btnRegistreraKund.Text = "Registera kund";
             this.btnRegistreraKund.UseVisualStyleBackColor = true;
+            this.btnRegistreraKund.Click += new System.EventHandler(this.btnRegistreraKund_Click);
             // 
             // label1
             // 
@@ -73,8 +74,10 @@
             this.lvwKunder.Location = new System.Drawing.Point(15, 155);
             this.lvwKunder.Name = "lvwKunder";
             this.lvwKunder.Size = new System.Drawing.Size(354, 430);
-            this.lvwKunder.TabIndex = 3;
+            this.lvwKunder.TabIndex = 8;
             this.lvwKunder.UseCompatibleStateImageBehavior = false;
+            this.lvwKunder.View = System.Windows.Forms.View.Details;
+            this.lvwKunder.SelectedIndexChanged += new System.EventHandler(this.lvwKunder_SelectedIndexChanged);
             // 
             // label2
             // 

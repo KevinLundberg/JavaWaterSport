@@ -16,5 +16,11 @@ namespace JavaWaterSport.View
         {
             InitializeComponent();
         }
+
+        private void visaAllaKunderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NyKund nykund = new NyKund();
+            nykund.Show();
+        }
     }
 }
