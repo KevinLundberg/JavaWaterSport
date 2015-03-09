@@ -40,6 +40,7 @@
             this.lvwUtrustning.Size = new System.Drawing.Size(239, 441);
             this.lvwUtrustning.TabIndex = 0;
             this.lvwUtrustning.UseCompatibleStateImageBehavior = false;
+            this.lvwUtrustning.SelectedIndexChanged += new System.EventHandler(this.lvwUtrustning_SelectedIndexChanged);
             // 
             // btnVisaUtrustning
             // 
@@ -49,6 +50,7 @@
             this.btnVisaUtrustning.TabIndex = 1;
             this.btnVisaUtrustning.Text = "Visa utrustning";
             this.btnVisaUtrustning.UseVisualStyleBackColor = true;
+            this.btnVisaUtrustning.Click += new System.EventHandler(this.btnVisaUtrustning_Click);
             // 
             // label1
             // 
