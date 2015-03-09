@@ -9,23 +9,32 @@ namespace JavaWaterSportSystem
 {
     class ServiceProvider
     {
-        static KundList _KundService;
-        //static MovieList _movieService;
-        //public static KundList GetKundService()
-        //{
-        //    if (_KundService == null)
-        //        _KundService = new KundList();
+        static KundList _kundService;
+        static DykarkursList _dykarkursService;
+        public static DykarkursList GetDykarkursService()
+        {
+            if (_dykarkursService == null)
+                try
+                {
+                    _dykarkursService = new DykarkursList();
+                }
+                catch (Exception)
+                {
 
-        //    return _KundService;
-        //}
+                    throw;
+                }
+
+
+            return _dykarkursService;
+        }
 
         public static KundList GetKundService()
         {
-            if (_KundService == null)
+            if (_kundService == null)
             {
                 try
                 {
-                    _KundService = new KundList();
+                    _kundService = new KundList();
                 }
                 catch (Exception)
                 {
@@ -35,7 +44,7 @@ namespace JavaWaterSportSystem
 
             }
 
-            return _KundService;
+            return _kundService;
         }
     }
 }
