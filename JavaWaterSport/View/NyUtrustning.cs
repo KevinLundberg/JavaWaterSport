@@ -16,5 +16,15 @@ namespace JavaWaterSport.View
         {
             InitializeComponent();
         }
+
+        private void btnVisaUtrustning_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvwUtrustning_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
