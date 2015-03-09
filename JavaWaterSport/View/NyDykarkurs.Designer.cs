@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lvwDykarKurser = new System.Windows.Forms.ListView();
+            this.lvwDykarkurser = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVisaDykarkurser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,13 +44,13 @@
             this.btnÄndraDykarkurs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lvwDykarKurser
+            // lvwDykarkurser
             // 
-            this.lvwDykarKurser.Location = new System.Drawing.Point(12, 47);
-            this.lvwDykarKurser.Name = "lvwDykarKurser";
-            this.lvwDykarKurser.Size = new System.Drawing.Size(220, 466);
-            this.lvwDykarKurser.TabIndex = 0;
-            this.lvwDykarKurser.UseCompatibleStateImageBehavior = false;
+            this.lvwDykarkurser.Location = new System.Drawing.Point(12, 47);
+            this.lvwDykarkurser.Name = "lvwDykarkurser";
+            this.lvwDykarkurser.Size = new System.Drawing.Size(220, 466);
+            this.lvwDykarkurser.TabIndex = 0;
+            this.lvwDykarkurser.UseCompatibleStateImageBehavior = false;
             // 
             // label1
             // 
@@ -191,7 +191,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnVisaDykarkurser);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lvwDykarKurser);
+            this.Controls.Add(this.lvwDykarkurser);
             this.Name = "NyDykarkurs";
             this.Text = "NyDykarkurs";
             this.ResumeLayout(false);
@@ -201,7 +201,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView lvwDykarKurser;
+        private System.Windows.Forms.ListView lvwDykarkurser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVisaDykarkurser;
         private System.Windows.Forms.Label label2;
