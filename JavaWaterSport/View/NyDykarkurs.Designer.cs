@@ -39,13 +39,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblDykinstruktör = new System.Windows.Forms.Label();
             this.cbxDykinstruktörer = new System.Windows.Forms.ComboBox();
+            this.btnLäggTillDykarkurs = new System.Windows.Forms.Button();
+            this.btnTabortDykarkurs = new System.Windows.Forms.Button();
+            this.btnÄndraDykarkurs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvwDykarKurser
             // 
             this.lvwDykarKurser.Location = new System.Drawing.Point(12, 47);
             this.lvwDykarKurser.Name = "lvwDykarKurser";
-            this.lvwDykarKurser.Size = new System.Drawing.Size(220, 387);
+            this.lvwDykarKurser.Size = new System.Drawing.Size(220, 466);
             this.lvwDykarKurser.TabIndex = 0;
             this.lvwDykarKurser.UseCompatibleStateImageBehavior = false;
             // 
@@ -60,17 +63,18 @@
             // 
             // btnVisaDykarkurser
             // 
-            this.btnVisaDykarkurser.Location = new System.Drawing.Point(12, 440);
+            this.btnVisaDykarkurser.Location = new System.Drawing.Point(238, 429);
             this.btnVisaDykarkurser.Name = "btnVisaDykarkurser";
-            this.btnVisaDykarkurser.Size = new System.Drawing.Size(220, 23);
+            this.btnVisaDykarkurser.Size = new System.Drawing.Size(240, 23);
             this.btnVisaDykarkurser.TabIndex = 2;
             this.btnVisaDykarkurser.Text = "Visa dykarkurser";
             this.btnVisaDykarkurser.UseVisualStyleBackColor = true;
+            this.btnVisaDykarkurser.Click += new System.EventHandler(this.btnVisaDykarkurser_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(263, 27);
+            this.label2.Location = new System.Drawing.Point(241, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 13);
             this.label2.TabIndex = 3;
@@ -78,7 +82,7 @@
             // 
             // tbxDatum
             // 
-            this.tbxDatum.Location = new System.Drawing.Point(313, 78);
+            this.tbxDatum.Location = new System.Drawing.Point(285, 86);
             this.tbxDatum.Name = "tbxDatum";
             this.tbxDatum.Size = new System.Drawing.Size(122, 20);
             this.tbxDatum.TabIndex = 4;
@@ -86,7 +90,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(266, 81);
+            this.label3.Location = new System.Drawing.Point(238, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 5;
@@ -95,7 +99,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(269, 121);
+            this.label4.Location = new System.Drawing.Point(241, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 6;
@@ -103,7 +107,7 @@
             // 
             // tbxTid
             // 
-            this.tbxTid.Location = new System.Drawing.Point(313, 114);
+            this.tbxTid.Location = new System.Drawing.Point(285, 122);
             this.tbxTid.Name = "tbxTid";
             this.tbxTid.Size = new System.Drawing.Size(122, 20);
             this.tbxTid.TabIndex = 7;
@@ -111,17 +115,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(269, 146);
+            this.label5.Location = new System.Drawing.Point(241, 154);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(209, 39);
+            this.label5.Size = new System.Drawing.Size(209, 52);
             this.label5.TabIndex = 8;
             this.label5.Text = "OBS:\r\nAnge datum på formatet: ÅR-MÅNAD-DAG\r\nsamt tid på formatet: TIMMAR-MINUTER\r" +
-    "\n";
+    "\nEx: 15-12-01 13-37";
             // 
             // lblDykinstruktör
             // 
             this.lblDykinstruktör.AutoSize = true;
-            this.lblDykinstruktör.Location = new System.Drawing.Point(269, 212);
+            this.lblDykinstruktör.Location = new System.Drawing.Point(241, 220);
             this.lblDykinstruktör.Name = "lblDykinstruktör";
             this.lblDykinstruktör.Size = new System.Drawing.Size(72, 13);
             this.lblDykinstruktör.TabIndex = 9;
@@ -134,16 +138,49 @@
             "Yngve",
             "Elias-Button",
             "Macke"});
-            this.cbxDykinstruktörer.Location = new System.Drawing.Point(348, 212);
+            this.cbxDykinstruktörer.Location = new System.Drawing.Point(320, 220);
             this.cbxDykinstruktörer.Name = "cbxDykinstruktörer";
             this.cbxDykinstruktörer.Size = new System.Drawing.Size(121, 21);
             this.cbxDykinstruktörer.TabIndex = 10;
+            // 
+            // btnLäggTillDykarkurs
+            // 
+            this.btnLäggTillDykarkurs.Location = new System.Drawing.Point(238, 253);
+            this.btnLäggTillDykarkurs.Name = "btnLäggTillDykarkurs";
+            this.btnLäggTillDykarkurs.Size = new System.Drawing.Size(240, 23);
+            this.btnLäggTillDykarkurs.TabIndex = 11;
+            this.btnLäggTillDykarkurs.Text = "Lägg till dykarkurs";
+            this.btnLäggTillDykarkurs.UseVisualStyleBackColor = true;
+            this.btnLäggTillDykarkurs.Click += new System.EventHandler(this.btnLäggTillDykarkurs_Click);
+            // 
+            // btnTabortDykarkurs
+            // 
+            this.btnTabortDykarkurs.Location = new System.Drawing.Point(238, 458);
+            this.btnTabortDykarkurs.Name = "btnTabortDykarkurs";
+            this.btnTabortDykarkurs.Size = new System.Drawing.Size(240, 23);
+            this.btnTabortDykarkurs.TabIndex = 12;
+            this.btnTabortDykarkurs.Text = "Ta bort dykarkurs";
+            this.btnTabortDykarkurs.UseVisualStyleBackColor = true;
+            this.btnTabortDykarkurs.Click += new System.EventHandler(this.btnTabortDykarkurs_Click);
+            // 
+            // btnÄndraDykarkurs
+            // 
+            this.btnÄndraDykarkurs.Location = new System.Drawing.Point(238, 487);
+            this.btnÄndraDykarkurs.Name = "btnÄndraDykarkurs";
+            this.btnÄndraDykarkurs.Size = new System.Drawing.Size(240, 23);
+            this.btnÄndraDykarkurs.TabIndex = 13;
+            this.btnÄndraDykarkurs.Text = "Ändra dykarkurs";
+            this.btnÄndraDykarkurs.UseVisualStyleBackColor = true;
+            this.btnÄndraDykarkurs.Click += new System.EventHandler(this.btnÄndraDykarkurs_Click);
             // 
             // NyDykarkurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 489);
+            this.ClientSize = new System.Drawing.Size(480, 525);
+            this.Controls.Add(this.btnÄndraDykarkurs);
+            this.Controls.Add(this.btnTabortDykarkurs);
+            this.Controls.Add(this.btnLäggTillDykarkurs);
             this.Controls.Add(this.cbxDykinstruktörer);
             this.Controls.Add(this.lblDykinstruktör);
             this.Controls.Add(this.label5);
@@ -175,5 +212,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblDykinstruktör;
         private System.Windows.Forms.ComboBox cbxDykinstruktörer;
+        private System.Windows.Forms.Button btnLäggTillDykarkurs;
+        private System.Windows.Forms.Button btnTabortDykarkurs;
+        private System.Windows.Forms.Button btnÄndraDykarkurs;
     }
 }

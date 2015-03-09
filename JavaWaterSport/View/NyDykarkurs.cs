@@ -24,5 +24,25 @@ namespace JavaWaterSport.View
                 //dyklista = ServiceProvider
             }
         }
+
+        private void btnÄndraDykarkurs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLäggTillDykarkurs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVisaDykarkurser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTabortDykarkurs_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
