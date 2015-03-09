@@ -111,7 +111,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(269, 137);
+            this.label5.Location = new System.Drawing.Point(269, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(209, 39);
             this.label5.TabIndex = 8;
@@ -121,7 +121,7 @@
             // lblDykinstruktör
             // 
             this.lblDykinstruktör.AutoSize = true;
-            this.lblDykinstruktör.Location = new System.Drawing.Point(269, 224);
+            this.lblDykinstruktör.Location = new System.Drawing.Point(269, 212);
             this.lblDykinstruktör.Name = "lblDykinstruktör";
             this.lblDykinstruktör.Size = new System.Drawing.Size(72, 13);
             this.lblDykinstruktör.TabIndex = 9;
@@ -134,7 +134,7 @@
             "Yngve",
             "Elias-Button",
             "Macke"});
-            this.cbxDykinstruktörer.Location = new System.Drawing.Point(348, 224);
+            this.cbxDykinstruktörer.Location = new System.Drawing.Point(348, 212);
             this.cbxDykinstruktörer.Name = "cbxDykinstruktörer";
             this.cbxDykinstruktörer.Size = new System.Drawing.Size(121, 21);
             this.cbxDykinstruktörer.TabIndex = 10;
