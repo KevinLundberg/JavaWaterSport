@@ -27,8 +27,10 @@ namespace JavaWaterSport.View
                 MessageBox.Show(ex.Message);
                 return;
             }
+
             InitializeComponent();
             kundLista.Updated += new EventHandler(kundService_Update);
+            initListView();
         }
 
         private void kundService_Update(object sender, EventArgs e)

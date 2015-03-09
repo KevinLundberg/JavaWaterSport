@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dykarkurserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaAllaDykarkurserIBiblioteketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +48,9 @@
             this.bokaDykarkursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hyrUtrustningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sparaKunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -58,7 +61,7 @@
             this.kunderToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(291, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(624, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -170,18 +173,21 @@
             this.registreraNyKundToolStripMenuItem.Name = "registreraNyKundToolStripMenuItem";
             this.registreraNyKundToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.registreraNyKundToolStripMenuItem.Text = "Registrera ny kund";
+            this.registreraNyKundToolStripMenuItem.Click += new System.EventHandler(this.registreraNyKundToolStripMenuItem_Click);
             // 
             // bokaDykarkursToolStripMenuItem
             // 
             this.bokaDykarkursToolStripMenuItem.Name = "bokaDykarkursToolStripMenuItem";
             this.bokaDykarkursToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.bokaDykarkursToolStripMenuItem.Text = "Boka dykarkurs";
+            this.bokaDykarkursToolStripMenuItem.Click += new System.EventHandler(this.bokaDykarkursToolStripMenuItem_Click);
             // 
             // hyrUtrustningToolStripMenuItem
             // 
             this.hyrUtrustningToolStripMenuItem.Name = "hyrUtrustningToolStripMenuItem";
             this.hyrUtrustningToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.hyrUtrustningToolStripMenuItem.Text = "Hyr utrustning";
+            this.hyrUtrustningToolStripMenuItem.Click += new System.EventHandler(this.hyrUtrustningToolStripMenuItem_Click);
             // 
             // sparaKunderToolStripMenuItem
             // 
@@ -189,17 +195,28 @@
             this.sparaKunderToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.sparaKunderToolStripMenuItem.Text = "Spara kunder";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(652, 353);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 267);
+            this.ClientSize = new System.Drawing.Size(624, 330);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Java WaterSport";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +243,6 @@
         private System.Windows.Forms.ToolStripMenuItem sparaDykarkurserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sparaUtrustningarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sparaKunderToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -74,7 +74,7 @@
             this.lvwKunder.Location = new System.Drawing.Point(15, 155);
             this.lvwKunder.Name = "lvwKunder";
             this.lvwKunder.Size = new System.Drawing.Size(354, 430);
-            this.lvwKunder.TabIndex = 8;
+            this.lvwKunder.TabIndex = 10;
             this.lvwKunder.UseCompatibleStateImageBehavior = false;
             this.lvwKunder.View = System.Windows.Forms.View.Details;
             this.lvwKunder.SelectedIndexChanged += new System.EventHandler(this.lvwKunder_SelectedIndexChanged);
