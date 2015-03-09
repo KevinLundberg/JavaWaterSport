@@ -18,23 +18,69 @@ namespace JavaWaterSport.View
     {
         private DykarkursList dykarkursLista;
         public NyDykarkurs()
-        {            
-            InitializeComponent();
+        {        
+            
             try
             {
-                dyklista = ServiceProvider
+                dykarkursLista = ServiceProvider.GetDykarkursService();
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            InitializeComponent();
+            dykarkursLista.Updated += new EventHandler(dykarkursService_Update);
+            initListView();
         }
 
-        private void btnÄndraDykarkurs_Click(object sender, EventArgs e)
+        private void dykarkursService_Update(object sender, EventArgs e)
         {
-            
+            updateListView();
         }
 
         private void btnLäggTillDykarkurs_Click(object sender, EventArgs e)
         {
-
+            dykarkursLista.Add(new Dykarkurs(tbxDatum.Text, tbxTid.Text, cbxDykinstruktörer.SelectedItem.ToString()));
         }
+
+        private void initListView()
+        {
+            lvwDykarkurser.FullRowSelect = true;
+            lvwDykarkurser.GridLines = true;
+
+            //Lägg till kolummner
+            lvwDykarkurser.Columns.Add("ID", -2, HorizontalAlignment.Left);
+            lvwDykarkurser.Columns.Add("Datum", -2, HorizontalAlignment.Left);
+            lvwDykarkurser.Columns.Add("Tid", -2, HorizontalAlignment.Left);
+            lvwDykarkurser.Columns.Add("Dykinstruktör", -2, HorizontalAlignment.Left);
+
+            updateListView();
+        }
+
+        private void updateListView()
+        {
+            lvwDykarkurser.Items.Clear();
+            string[] columns = new string[4];
+            ListViewItem item;
+
+            for (int i = 0; i < dykarkursLista.Count(); i++)
+            {
+                columns[0] = dykarkursLista.Get(i).getId().ToString();
+                columns[1] = dykarkursLista.Get(i).getDatum();
+                columns[2] = dykarkursLista.Get(i).getTid();
+                columns[3] = dykarkursLista.Get(i).getDykinstruktör();
+                item = new ListViewItem(columns);
+                lvwDykarkurser.Items.Add(item);
+            }
+        }        
+
+
+        private void btnÄndraDykarkurs_Click(object sender, EventArgs e)
+        {
+            
+        }       
 
         private void btnVisaDykarkurser_Click(object sender, EventArgs e)
         {

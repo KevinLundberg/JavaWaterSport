@@ -40,5 +40,11 @@ namespace JavaWaterSport.View
             NyKund hyrUtrustning = new NyKund();
             hyrUtrustning.Show();
         }
+
+        private void listaAllaDykarkurserIBiblioteketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NyDykarkurs visaDykarkurser = new NyDykarkurs();
+            visaDykarkurser.Show();
+        }
     }
 }

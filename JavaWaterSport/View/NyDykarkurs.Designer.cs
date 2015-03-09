@@ -51,6 +51,7 @@
             this.lvwDykarkurser.Size = new System.Drawing.Size(220, 466);
             this.lvwDykarkurser.TabIndex = 0;
             this.lvwDykarkurser.UseCompatibleStateImageBehavior = false;
+            this.lvwDykarkurser.View = System.Windows.Forms.View.Details;
             // 
             // label1
             // 

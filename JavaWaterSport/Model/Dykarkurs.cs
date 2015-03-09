@@ -11,14 +11,14 @@ namespace JavaWaterSport.Model
     {
         // medlemsvariabler
         private int Id;
-        private int tid;
+        private string tid;
         private string dykinstruktör;
         private string datum;
 
         // default konstruktor
         public Dykarkurs()
         {
-            this.tid = 0;
+            this.tid = "null";
             this.dykinstruktör = "Ingen dykinstruktör";
             this.datum = "Inget datum";
         }
@@ -29,7 +29,7 @@ namespace JavaWaterSport.Model
         /// <param name="inTid">Dykarkurs tid</param>
         /// <param name="inDykinstruktör">Dykarkurs dykinstruktör</param>
         /// <param name="inDatum">Dykarkurs datum</param>
-        public Dykarkurs(int inTid, string inDykinstruktör, string inDatum)
+        public Dykarkurs(string inTid, string inDykinstruktör, string inDatum)
         {
             this.tid = inTid;
             this.dykinstruktör = inDykinstruktör;
@@ -50,7 +50,7 @@ namespace JavaWaterSport.Model
         /// Return dykarkursens tid.
         /// </summary>
         /// <returns>Dykarkurs tid</returns>
-        public int getTid()
+        public string getTid()
         {
             return this.tid;
         }
@@ -77,7 +77,7 @@ namespace JavaWaterSport.Model
         /// Set dykarkursens tid.
         /// </summary>
         /// <param name="inTitle">Dykarkurs tid</param>
-        public void setTid(int inTid)
+        public void setTid(string inTid)
         {
             this.tid = inTid;
         }

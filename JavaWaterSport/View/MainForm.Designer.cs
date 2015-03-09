@@ -82,6 +82,7 @@
             this.listaAllaDykarkurserIBiblioteketToolStripMenuItem.Name = "listaAllaDykarkurserIBiblioteketToolStripMenuItem";
             this.listaAllaDykarkurserIBiblioteketToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
             this.listaAllaDykarkurserIBiblioteketToolStripMenuItem.Text = "Visa alla dykarkurser i biblioteket";
+            this.listaAllaDykarkurserIBiblioteketToolStripMenuItem.Click += new System.EventHandler(this.listaAllaDykarkurserIBiblioteketToolStripMenuItem_Click);
             // 
             // listaAllaTillgängligaDykarkurserToolStripMenuItem
             // 
