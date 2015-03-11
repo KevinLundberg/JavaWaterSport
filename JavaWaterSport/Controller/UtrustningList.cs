@@ -1,4 +1,16 @@
-﻿using System;
+﻿﻿//-------------------------------------------------------------------------------------
+// File name...................: UtrustningList.cs
+// Purpose.....................: Att samla och hämta information
+//                               i en lista om utrstning som är hyrd
+//                               eller bokad utav en kund.
+//                            
+// Programmer..................: Andreas Pallin
+// Date........................: 2015-03-11
+// Version.....................:
+// Changed.....................: 
+//--------------------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
