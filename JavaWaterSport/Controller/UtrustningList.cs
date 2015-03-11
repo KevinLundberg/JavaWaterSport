@@ -3,42 +3,63 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JavaWaterSport.DAL;
 using JavaWaterSport.Service;
-using JavaWaterSportSystem;
 using JavaWaterSport.Model;
-using System.IO;
+using JavaWaterSport.Controller;
 
 namespace JavaWaterSport.Controller
 {
     class UtrustningList : IListor<Utrustning>, IService
     {
-        private List<Utrustning> u_utrustning;
-
+        private List<Utrustning> u_utrustninglist;
         public event EventHandler Updated;
 
 
+        public UtrustningList()
+        {
+            u_utrustninglist = new List<Utrustning>();
+        }
+
+        
         protected void OnUpdated()
         {
             if (Updated != null)
                 Updated(this, EventArgs.Empty);
         }
 
-        public UtrustningList()
+        public Utrustning Get(int index)
         {
-            u_utrustning = new List<Utrustning>();
-            try
+            return u_utrustninglist.ElementAt(index);
+        }
+
+        public int Count()
+        {
+            return u_utrustninglist.Count();
+        }
+
+        public Utrustning FindDatum(string title)
+        {
+            for (int i = 0; i < u_utrustninglist.Count(); i++)
             {
-                if(File.Exists("UtrustningLista.DAT"))
+                if (u_utrustninglist[i].getDatum() == title)
                 {
-                    u_utrustning = BinarySerialization<List<Utrustning>>.BinaryDeSerialize("UtrustningLista.DAT");
+                    return u_utrustninglist[i];
                 }
             }
-            catch (Exception ex)
-            {
+            return null;
+        }
 
-                throw new CustomException(ex.Message);
+        public int GetIndexOfDatum (string datum)
+        {
+            for (int i = 0; i < u_utrustninglist.Count(); i++)
+            {
+                if (u_utrustninglist[i].getDatum() == datum)
+                {
+                    return i;
+                }
             }
+            return -1;
         }
     }
+
 }
