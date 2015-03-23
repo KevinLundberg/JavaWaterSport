@@ -81,13 +81,13 @@ namespace JavaWaterSport.View
                 tbxNamn.Clear();
                 tbxPersonligID.Clear();
                 string kundID = lvwKunder.SelectedItems[0].Text;
-                Kund kund = kundList.FindID(kundID);
+                Kund kund = kundList.Find(kundID);
                 tbxNamn.Text = kund.Namn;
                 tbxPersonligID.Text = kund.PersonligID;
             }
             catch(Exception)
             {
-                MessageBox.Show("Fel: Ta hjälp av André");
+               // MessageBox.Show("Ett fel har uppståt");
             }
         }
     }

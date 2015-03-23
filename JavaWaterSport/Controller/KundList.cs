@@ -61,7 +61,7 @@ namespace JavaWaterSport.Controller
             return k_kundList.Count();
 		}
 
-		public Kund FindID(string strFind)
+		public Kund Find(string strFind)
 		{
 
             var me = (from kund in k_kundList
