@@ -14,18 +14,15 @@ namespace JavaWaterSport.Controller
         private List<Dykarkurs> d_dykarkursList;
 
         public event EventHandler Updated;
-
-
-        public DykarkursList()
-        {
-            d_dykarkursList = new List<Dykarkurs>();
-        }
-
-
+        
         protected void OnUpdated()
         {
             if (Updated != null)
                 Updated(this, EventArgs.Empty);
+        }
+        public DykarkursList()
+        {
+            d_dykarkursList = new List<Dykarkurs>();
         }
 
         public void Add(Dykarkurs item)
