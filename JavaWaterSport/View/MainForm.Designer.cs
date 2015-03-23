@@ -89,12 +89,14 @@
             this.listaAllaTillgängligaDykarkurserToolStripMenuItem.Name = "listaAllaTillgängligaDykarkurserToolStripMenuItem";
             this.listaAllaTillgängligaDykarkurserToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
             this.listaAllaTillgängligaDykarkurserToolStripMenuItem.Text = "Visa alla tillgängliga dykarkurser ";
+            this.listaAllaTillgängligaDykarkurserToolStripMenuItem.Click += new System.EventHandler(this.listaAllaTillgängligaDykarkurserToolStripMenuItem_Click);
             // 
             // läggTillNyDykarkursToolStripMenuItem
             // 
             this.läggTillNyDykarkursToolStripMenuItem.Name = "läggTillNyDykarkursToolStripMenuItem";
             this.läggTillNyDykarkursToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
             this.läggTillNyDykarkursToolStripMenuItem.Text = "Lägg till en ny dykarkurs";
+            this.läggTillNyDykarkursToolStripMenuItem.Click += new System.EventHandler(this.läggTillNyDykarkursToolStripMenuItem_Click);
             // 
             // läggTillNyKopiaAvEnDykarkursToolStripMenuItem
             // 

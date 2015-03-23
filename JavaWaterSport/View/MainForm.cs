@@ -46,5 +46,17 @@ namespace JavaWaterSport.View
             NyDykarkurs visaDykarkurser = new NyDykarkurs();
             visaDykarkurser.Show();
         }
+
+        private void listaAllaTillgängligaDykarkurserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NyDykarkurs listaDykarkurser = new NyDykarkurs();
+            listaDykarkurser.Show();
+        }
+
+        private void läggTillNyDykarkursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NyDykarkurs läggtillDykarkurs = new NyDykarkurs();
+            läggtillDykarkurs.Show();
+        }
     }
 }
