@@ -23,55 +23,32 @@ namespace JavaWaterSport.Controller
 {
     class UtrustningList : IListor<Utrustning>, IService
     {
-        private List<Utrustning> u_utrustninglist;
+        private List<Utrustning> u_utrustning;
+
         public event EventHandler Updated;
 
 
+    //    protected void OnUpdated()
+    //    {
+    //        if (Updated != null)
+    //            Updated(this, EventArgs.Empty);
+    //    }
+
         public UtrustningList()
         {
-            u_utrustninglist = new List<Utrustning>();
-        }
-
-        
-        protected void OnUpdated()
-        {
-            if (Updated != null)
-                Updated(this, EventArgs.Empty);
-        }
-
-        public Utrustning Get(int index)
-        {
-            return u_utrustninglist.ElementAt(index);
-        }
-
-        public int Count()
-        {
-            return u_utrustninglist.Count();
-        }
-
-        public Utrustning FindDatum(string title)
-        {
-            for (int i = 0; i < u_utrustninglist.Count(); i++)
+            u_utrustning = new List<Utrustning>();
+            try
             {
-                if (u_utrustninglist[i].getDatum() == title)
+                if(File.Exists("UtrustningLista.DAT"))
                 {
-                    return u_utrustninglist[i];
+                    u_utrustning = BinarySerialization<List<Utrustning>>.BinaryDeSerialize("UtrustningLista.DAT");
                 }
             }
-            return null;
-        }
-
-        public int GetIndexOfDatum (string datum)
-        {
-            for (int i = 0; i < u_utrustninglist.Count(); i++)
+            catch (Exception ex)
             {
-                if (u_utrustninglist[i].getDatum() == datum)
-                {
-                    return i;
-                }
+
+                throw new CustomException(ex.Message);
             }
-            return -1;
         }
     }
-
 }
