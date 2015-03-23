@@ -52,6 +52,7 @@
             this.lvwDykarkurser.TabIndex = 0;
             this.lvwDykarkurser.UseCompatibleStateImageBehavior = false;
             this.lvwDykarkurser.View = System.Windows.Forms.View.Details;
+            this.lvwDykarkurser.SelectedIndexChanged += new System.EventHandler(this.lvwDykarkurser_SelectedIndexChanged);
             // 
             // label1
             // 

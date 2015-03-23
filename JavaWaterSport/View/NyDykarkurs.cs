@@ -91,5 +91,24 @@ namespace JavaWaterSport.View
         {
 
         }
+
+        private void lvwDykarkurser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                tbxDatum.Clear();
+                tbxTid.Clear();
+                cbxDykinstruktörer.ResetText();
+                string dykarkursDatum = lvwDykarkurser.SelectedItems[0].Text;
+                Dykarkurs dykarkurs = dykarkursLista.FindDatum(dykarkursDatum);
+                tbxDatum.Text = dykarkurs.getDatum();
+                tbxTid.Text = dykarkurs.getTid();
+            }
+            catch (Exception)
+            {
+                
+                
+            }
+        }
     }
 }
