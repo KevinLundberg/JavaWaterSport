@@ -42,7 +42,7 @@ namespace JavaWaterSport.View
 
         private void btnLäggTillDykarkurs_Click(object sender, EventArgs e)
         {
-            dykarkursLista.Add(new Dykarkurs(tbxDatum.Text, tbxTid.Text, cbxDykinstruktörer.SelectedItem.ToString()));
+            dykarkursLista.Add(new Dykarkurs(tbxTid.Text, cbxDykinstruktörer.SelectedItem.ToString(), tbxDatum.Text));
         }
 
         private void initListView()
@@ -68,9 +68,9 @@ namespace JavaWaterSport.View
             for (int i = 0; i < dykarkursLista.Count(); i++)
             {
                 columns[0] = dykarkursLista.Get(i).getId().ToString();
-                columns[1] = dykarkursLista.Get(i).getDatum();
-                columns[2] = dykarkursLista.Get(i).getTid();
-                columns[3] = dykarkursLista.Get(i).getDykinstruktör();
+                columns[1] = dykarkursLista.Get(i).getTid();
+                columns[2] = dykarkursLista.Get(i).getDykinstruktör();
+                columns[3] = dykarkursLista.Get(i).getDatum();
                 item = new ListViewItem(columns);
                 lvwDykarkurser.Items.Add(item);
             }
