@@ -10,16 +10,16 @@
 // Changed.....................: 
 //--------------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JavaWaterSport.Service;
-using JavaWaterSport.Model;
-using JavaWaterSport.Controller;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+//using JavaWaterSport.Service;
+//using JavaWaterSport.Model;
+//using JavaWaterSport.Controller;
 
-namespace JavaWaterSport.Controller
+//namespace JavaWaterSport.Controller
 //{
 //    class UtrustningList : IListor<Utrustning>, IService
 //    {
