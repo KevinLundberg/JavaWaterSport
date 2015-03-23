@@ -15,12 +15,12 @@ namespace JavaWaterSport.View
 {
     public partial class NyKund : Form
     {
-        private KundList kundLista;
+        private KundList kundList;
         public NyKund()
         {
             try
             {
-                kundLista = ServiceProvider.GetKundService();
+                kundList = ServiceProvider.GetKundService();
             }
             catch (Exception ex)
             {
@@ -29,7 +29,7 @@ namespace JavaWaterSport.View
             }
 
             InitializeComponent();
-            kundLista.Updated += new EventHandler(kundService_Update);
+            kundList.Updated += new EventHandler(kundService_Update);
             initListView();
         }
 
@@ -40,7 +40,7 @@ namespace JavaWaterSport.View
 
         private void btnRegistreraKund_Click(object sender, EventArgs e)
         {
-            kundLista.Add(new Kund(tbxPersonligID.Text, tbxNamn.Text));
+            kundList.Add(new Kund(tbxPersonligID.Text, tbxNamn.Text));
         }
 
         private void initListView()
@@ -64,11 +64,11 @@ namespace JavaWaterSport.View
             string[] columns = new string[3];
             ListViewItem item;
 
-            for (int i = 0; i < kundLista.Count(); i++)
+            for (int i = 0; i < kundList.Count(); i++)
             {
-                columns[0] = kundLista.Get(i).ID.ToString();
-                columns[1] = kundLista.Get(i).PersonligID;
-                columns[2] = kundLista.Get(i).Namn;
+                columns[0] = kundList.Get(i).ID.ToString();
+                columns[1] = kundList.Get(i).PersonligID;
+                columns[2] = kundList.Get(i).Namn;
                 item = new ListViewItem(columns);
                 lvwKunder.Items.Add(item);
             }
@@ -78,11 +78,12 @@ namespace JavaWaterSport.View
         {
             try
             {
+                tbxNamn.Clear();
+                tbxPersonligID.Clear();
                 string kundID = lvwKunder.SelectedItems[0].Text;
-                Kund kund = kundLista.Find(kundID);
-
-                tbxNamn.Text = kund.PersonligID;
+                Kund kund = kundList.FindID(kundID);
                 tbxNamn.Text = kund.Namn;
+                tbxPersonligID.Text = kund.PersonligID;
             }
             catch(Exception)
             {
