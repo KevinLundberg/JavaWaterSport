@@ -121,8 +121,8 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(209, 52);
             this.label5.TabIndex = 8;
-            this.label5.Text = "OBS:\r\nAnge datum på formatet: ÅR-MÅNAD-DAG\r\nsamt tid på formatet: TIMMAR-MINUTER\r" +
-    "\nEx: 15-12-01 13-37";
+            this.label5.Text = "OBS:\r\nAnge datum på formatet: ÅR-MÅNAD-DAG\r\nsamt tid på formatet: TIMMAR:MINUTER\r" +
+    "\nEx: 15-12-01 13:37";
             // 
             // lblDykinstruktör
             // 

@@ -45,6 +45,7 @@ namespace JavaWaterSport.View
 
         private void initListView()
         {
+            //Egenskaper för Kund-listview
             lvwKunder.FullRowSelect = true;
             lvwKunder.GridLines = true;
 
@@ -52,7 +53,16 @@ namespace JavaWaterSport.View
             lvwKunder.Columns.Add("ID", -2, HorizontalAlignment.Left);
             lvwKunder.Columns.Add("Kundnummer", -2, HorizontalAlignment.Left);
             lvwKunder.Columns.Add("Namn", -2, HorizontalAlignment.Left);
-            
+
+            //Egenskaper för dykarkurs-listview
+            lvwDykarkurs.FullRowSelect = true;
+            lvwDykarkurs.GridLines = true;
+
+            lvwDykarkurs.Columns.Add("ID", -2, HorizontalAlignment.Left);
+            lvwDykarkurs.Columns.Add("Tid     ", -2, HorizontalAlignment.Left);
+            lvwDykarkurs.Columns.Add("Dykinstruktör", -2, HorizontalAlignment.Left);
+            lvwDykarkurs.Columns.Add("Datum", -2, HorizontalAlignment.Left);
+
             updateListView();
         }
 

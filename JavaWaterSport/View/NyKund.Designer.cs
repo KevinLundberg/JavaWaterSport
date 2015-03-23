@@ -139,6 +139,7 @@
             this.lvwDykarkurs.Size = new System.Drawing.Size(276, 225);
             this.lvwDykarkurs.TabIndex = 17;
             this.lvwDykarkurs.UseCompatibleStateImageBehavior = false;
+            this.lvwDykarkurs.View = System.Windows.Forms.View.Details;
             // 
             // btnBokaUtrustning
             // 

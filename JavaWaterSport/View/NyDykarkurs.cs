@@ -52,7 +52,7 @@ namespace JavaWaterSport.View
 
             //Lägg till kolummner
             lvwDykarkurser.Columns.Add("ID", -2, HorizontalAlignment.Left);
-            lvwDykarkurser.Columns.Add("Tid", -2, HorizontalAlignment.Left);
+            lvwDykarkurser.Columns.Add("Tid     ", -2, HorizontalAlignment.Left);
             lvwDykarkurser.Columns.Add("Dykinstruktör", -2, HorizontalAlignment.Left);
             lvwDykarkurser.Columns.Add("Datum", -2, HorizontalAlignment.Left);
 
@@ -89,7 +89,9 @@ namespace JavaWaterSport.View
 
         private void btnTabortDykarkurs_Click(object sender, EventArgs e)
         {
-
+            //string selected = lvwDykarkurser.SelectedItems.ToString(); 
+            
+            //lvwDykarkurser.Columns.RemoveAt(Convert.ToInt32(selected));
         }
 
         private void lvwDykarkurser_SelectedIndexChanged(object sender, EventArgs e)
