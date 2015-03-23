@@ -52,9 +52,9 @@ namespace JavaWaterSport.View
 
             //Lägg till kolummner
             lvwDykarkurser.Columns.Add("ID", -2, HorizontalAlignment.Left);
-            lvwDykarkurser.Columns.Add("Datum", -2, HorizontalAlignment.Left);
             lvwDykarkurser.Columns.Add("Tid", -2, HorizontalAlignment.Left);
             lvwDykarkurser.Columns.Add("Dykinstruktör", -2, HorizontalAlignment.Left);
+            lvwDykarkurser.Columns.Add("Datum", -2, HorizontalAlignment.Left);
 
             updateListView();
         }

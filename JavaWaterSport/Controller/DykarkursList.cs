@@ -12,6 +12,7 @@ namespace JavaWaterSport.Controller
     class DykarkursList : IListor<Dykarkurs>, IService
     {
         private List<Dykarkurs> d_dykarkursList;
+
         public event EventHandler Updated;
 
 
@@ -31,6 +32,7 @@ namespace JavaWaterSport.Controller
         {
             item.setId(NextID());
             d_dykarkursList.Add(item);
+            OnUpdated();
         }
 
         public void Remove(Dykarkurs item)
