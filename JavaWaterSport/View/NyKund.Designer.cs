@@ -158,6 +158,7 @@
             this.btnBokaDykarkurs.TabIndex = 19;
             this.btnBokaDykarkurs.Text = "Boka Dykarkurs";
             this.btnBokaDykarkurs.UseVisualStyleBackColor = true;
+            this.btnBokaDykarkurs.Click += new System.EventHandler(this.btnBokaDykarkurs_Click);
             // 
             // NyKund
             // 

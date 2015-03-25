@@ -16,6 +16,8 @@ namespace JavaWaterSport.View
     public partial class NyKund : Form
     {
         private KundList kundList;
+        private DykarkursList dykList;
+
         public NyKund()
         {
             try
@@ -28,9 +30,26 @@ namespace JavaWaterSport.View
                 return;
             }
 
+            try
+            {
+                dykList = ServiceProvider.GetDykarkursService();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
             InitializeComponent();
+            dykList.Updated += new EventHandler(dykService_Update);            
             kundList.Updated += new EventHandler(kundService_Update);
             initListView();
+        }
+
+
+        private void dykService_Update(object sender, EventArgs e)
+        {
+ 	        updateDykListView();
         }
 
         private void kundService_Update(object sender, EventArgs e)
@@ -41,6 +60,11 @@ namespace JavaWaterSport.View
         private void btnRegistreraKund_Click(object sender, EventArgs e)
         {
             kundList.Add(new Kund(tbxPersonligID.Text, tbxNamn.Text));
+        }
+
+        private void btnBokaDykarkurs_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void initListView()
@@ -64,9 +88,8 @@ namespace JavaWaterSport.View
             lvwDykarkurs.Columns.Add("Datum", -2, HorizontalAlignment.Left);
 
             updateListView();
-        }
-
-        //private void 
+            updateDykListView();
+        }         
 
         private void updateListView()
         {
@@ -81,6 +104,23 @@ namespace JavaWaterSport.View
                 columns[2] = kundList.Get(i).Namn;
                 item = new ListViewItem(columns);
                 lvwKunder.Items.Add(item);
+            }            
+        }
+
+        private void updateDykListView()
+        {
+            lvwDykarkurs.Items.Clear();
+            string[] columns = new string[4];
+            ListViewItem item;
+
+            for (int index = 0; index < dykList.Count(); index++)
+            {
+                columns[0] = dykList.Get(index).getId().ToString();
+                columns[1] = dykList.Get(index).getTid();
+                columns[2] = dykList.Get(index).getDykinstruktör();
+                columns[3] = dykList.Get(index).getDatum();
+                item = new ListViewItem(columns);
+                lvwDykarkurs.Items.Add(item);
             }
         }
 
@@ -99,6 +139,6 @@ namespace JavaWaterSport.View
             {
                // MessageBox.Show("Ett fel har uppståt");
             }
-        }
+        }        
     }
 }
