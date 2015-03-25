@@ -37,13 +37,10 @@ namespace JavaWaterSport.Model
         }
 
         // metoder
-        public void setId(int inId)
+        public int ID
         {
-            this.Id = inId;
-        }
-        public int getId()
-        {
-            return this.Id;
+            get { return Id; }
+            set { Id = value; }
         }
 
         /// <summary>

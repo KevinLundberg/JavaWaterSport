@@ -27,7 +27,7 @@ namespace JavaWaterSport.Controller
 
         public void Add(Dykarkurs item)
         {
-            item.setId(NextID());
+            item.ID = NextID();
             d_dykarkursList.Add(item);
             OnUpdated();
         }
@@ -47,18 +47,12 @@ namespace JavaWaterSport.Controller
             return d_dykarkursList.Count();
         }
 
-
-        public Dykarkurs FindDatum(string title)
+        public Dykarkurs Find(string strFind)
         {
-            for (int i = 0; i < d_dykarkursList.Count(); i++)
-            {
-                if (d_dykarkursList[i].getDatum() == title)
-                {
-                    return d_dykarkursList[i];
-                }
-            }
-            return null;
-        }        
+
+            var me = (from dykarkurs in d_dykarkursList where dykarkurs.ID.ToString() == strFind select dykarkurs).First();
+            return me;
+        }   
 
         public int GetIndexOfDatum(string datum)
         {
@@ -80,12 +74,6 @@ namespace JavaWaterSport.Controller
             };
 
             return dykarkurser.ToArray();
-        }
-
-
-        public Dykarkurs Find(string strFind)
-        {
-            throw new NotImplementedException();
         }
 
         public int NextID()

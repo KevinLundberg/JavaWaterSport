@@ -59,7 +59,15 @@ namespace JavaWaterSport.View
 
         private void btnRegistreraKund_Click(object sender, EventArgs e)
         {
-            kundList.Add(new Kund(tbxPersonligID.Text, tbxNamn.Text));
+            try
+            {
+                kundList.Add(new Kund(tbxPersonligID.Text, tbxNamn.Text));
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Fyll i alla uppgifter!");
+            }            
         }
 
         private void btnBokaDykarkurs_Click(object sender, EventArgs e)
@@ -115,7 +123,7 @@ namespace JavaWaterSport.View
 
             for (int index = 0; index < dykList.Count(); index++)
             {
-                columns[0] = dykList.Get(index).getId().ToString();
+                columns[0] = dykList.Get(index).ID.ToString();
                 columns[1] = dykList.Get(index).getTid();
                 columns[2] = dykList.Get(index).getDykinstruktör();
                 columns[3] = dykList.Get(index).getDatum();

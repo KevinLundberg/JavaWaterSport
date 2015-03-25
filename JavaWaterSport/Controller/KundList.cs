@@ -64,10 +64,7 @@ namespace JavaWaterSport.Controller
 		public Kund Find(string strFind)
 		{
 
-            var me = (from kund in k_kundList
-                      where kund.ID.ToString() == strFind
-                      select kund).First();
-
+            var me = (from kund in k_kundList where kund.ID.ToString() == strFind select kund).First();
             return me;
 		}
 

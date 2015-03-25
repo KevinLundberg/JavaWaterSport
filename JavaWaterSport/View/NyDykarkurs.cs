@@ -42,7 +42,14 @@ namespace JavaWaterSport.View
 
         private void btnLäggTillDykarkurs_Click(object sender, EventArgs e)
         {
-            dykarkursLista.Add(new Dykarkurs(tbxTid.Text, cbxDykinstruktörer.SelectedItem.ToString(), tbxDatum.Text));
+            try
+            {
+                dykarkursLista.Add(new Dykarkurs(tbxTid.Text, cbxDykinstruktörer.SelectedItem.ToString(), tbxDatum.Text));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Fyll i alla uppgifter!");
+            }            
         }
 
         private void initListView()
@@ -67,7 +74,7 @@ namespace JavaWaterSport.View
 
             for (int i = 0; i < dykarkursLista.Count(); i++)
             {
-                columns[0] = dykarkursLista.Get(i).getId().ToString();
+                columns[0] = dykarkursLista.Get(i).ID.ToString();
                 columns[1] = dykarkursLista.Get(i).getTid();
                 columns[2] = dykarkursLista.Get(i).getDykinstruktör();
                 columns[3] = dykarkursLista.Get(i).getDatum();
@@ -89,9 +96,22 @@ namespace JavaWaterSport.View
 
         private void btnTabortDykarkurs_Click(object sender, EventArgs e)
         {
-            //string selected = lvwDykarkurser.SelectedItems.ToString(); 
-            
-            //lvwDykarkurser.Columns.RemoveAt(Convert.ToInt32(selected));
+            try
+            { 
+                string dykarkursID = lvwDykarkurser.SelectedItems[0].Text;
+                Dykarkurs dykarkurs = dykarkursLista.Find(dykarkursID);
+                dykarkursLista.Remove(dykarkurs);
+
+                tbxDatum.Clear();
+                tbxTid.Clear();
+                cbxDykinstruktörer.ResetText();
+                updateListView();         
+            }
+
+            catch
+            {
+                MessageBox.Show("Markera en dykarkurs för att radera!");
+            }
         }
 
         private void lvwDykarkurser_SelectedIndexChanged(object sender, EventArgs e)
@@ -101,10 +121,11 @@ namespace JavaWaterSport.View
                 tbxDatum.Clear();
                 tbxTid.Clear();
                 cbxDykinstruktörer.ResetText();
-                string dykarkursDatum = lvwDykarkurser.SelectedItems[0].Text;
-                Dykarkurs dykarkurs = dykarkursLista.FindDatum(dykarkursDatum);
+                string dykarkursID = lvwDykarkurser.SelectedItems[0].Text;
+                Dykarkurs dykarkurs = dykarkursLista.Find(dykarkursID);
                 tbxDatum.Text = dykarkurs.getDatum();
                 tbxTid.Text = dykarkurs.getTid();
+                cbxDykinstruktörer.Text = dykarkurs.getDykinstruktör();               
             }
             catch (Exception)
             {
