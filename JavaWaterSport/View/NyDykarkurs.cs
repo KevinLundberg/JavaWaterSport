@@ -38,19 +38,7 @@ namespace JavaWaterSport.View
         private void dykarkursService_Update(object sender, EventArgs e)
         {
             updateListView();
-        }
-
-        private void btnLäggTillDykarkurs_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                dykarkursLista.Add(new Dykarkurs(tbxTid.Text, cbxDykinstruktörer.SelectedItem.ToString(), tbxDatum.Text));
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Fyll i alla uppgifter!");
-            }            
-        }
+        }      
 
         private void initListView()
         {
@@ -94,6 +82,18 @@ namespace JavaWaterSport.View
 
         }
 
+        private void btnLäggTillDykarkurs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dykarkursLista.Add(new Dykarkurs(tbxTid.Text, cbxDykinstruktörer.SelectedItem.ToString(), tbxDatum.Text));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Fyll i alla uppgifter!");
+            }
+        }
+
         private void btnTabortDykarkurs_Click(object sender, EventArgs e)
         {
             try
@@ -127,6 +127,7 @@ namespace JavaWaterSport.View
                 tbxTid.Text = dykarkurs.getTid();
                 cbxDykinstruktörer.Text = dykarkurs.getDykinstruktör();               
             }
+
             catch (Exception)
             {
                 

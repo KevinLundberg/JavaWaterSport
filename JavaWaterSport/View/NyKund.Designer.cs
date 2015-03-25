@@ -41,6 +41,7 @@
             this.lvwDykarkurs = new System.Windows.Forms.ListView();
             this.btnBokaUtrustning = new System.Windows.Forms.Button();
             this.btnBokaDykarkurs = new System.Windows.Forms.Button();
+            this.btnTaBortKund = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRegistreraKund
@@ -160,11 +161,22 @@
             this.btnBokaDykarkurs.UseVisualStyleBackColor = true;
             this.btnBokaDykarkurs.Click += new System.EventHandler(this.btnBokaDykarkurs_Click);
             // 
+            // btnTaBortKund
+            // 
+            this.btnTaBortKund.Location = new System.Drawing.Point(15, 591);
+            this.btnTaBortKund.Name = "btnTaBortKund";
+            this.btnTaBortKund.Size = new System.Drawing.Size(354, 23);
+            this.btnTaBortKund.TabIndex = 20;
+            this.btnTaBortKund.Text = "Ta bort kund";
+            this.btnTaBortKund.UseVisualStyleBackColor = true;
+            this.btnTaBortKund.Click += new System.EventHandler(this.btnTaBortKund_Click);
+            // 
             // NyKund
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 626);
+            this.Controls.Add(this.btnTaBortKund);
             this.Controls.Add(this.btnBokaDykarkurs);
             this.Controls.Add(this.btnBokaUtrustning);
             this.Controls.Add(this.lvwDykarkurs);
@@ -200,5 +212,6 @@
         private System.Windows.Forms.ListView lvwDykarkurs;
         private System.Windows.Forms.Button btnBokaUtrustning;
         private System.Windows.Forms.Button btnBokaDykarkurs;
+        private System.Windows.Forms.Button btnTaBortKund;
     }
 }
