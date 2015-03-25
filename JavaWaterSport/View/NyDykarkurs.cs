@@ -104,8 +104,7 @@ namespace JavaWaterSport.View
 
                 tbxDatum.Clear();
                 tbxTid.Clear();
-                cbxDykinstruktörer.ResetText();
-                updateListView();         
+                cbxDykinstruktörer.ResetText();                       
             }
 
             catch

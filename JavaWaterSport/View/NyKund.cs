@@ -123,8 +123,7 @@ namespace JavaWaterSport.View
                 kundList.Remove(kund);
 
                 tbxNamn.Clear();
-                tbxPersonligID.Clear();
-                updateListView();
+                tbxPersonligID.Clear();                
             }
 
             catch
