@@ -57,24 +57,6 @@ namespace JavaWaterSport.View
             updateListView();
         }
 
-        private void btnRegistreraKund_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                kundList.Add(new Kund(tbxPersonligID.Text, tbxNamn.Text));
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("Fyll i alla uppgifter!");
-            }            
-        }
-
-        private void btnBokaDykarkurs_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void initListView()
         {
             //Egenskaper för Kund-listview
@@ -132,6 +114,42 @@ namespace JavaWaterSport.View
             }
         }
 
+        private void btnTaBortKund_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string kundID = lvwKunder.SelectedItems[0].Text;
+                Kund kund = kundList.Find(kundID);
+                kundList.Remove(kund);
+
+                tbxNamn.Clear();
+                tbxPersonligID.Clear();                
+            }
+
+            catch
+            {
+                MessageBox.Show("Markera en kund för att radera!");
+            }
+        }
+
+        private void btnRegistreraKund_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                kundList.Add(new Kund(tbxPersonligID.Text, tbxNamn.Text));
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Fyll i alla uppgifter!");
+            }
+        }
+
+        private void btnBokaDykarkurs_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void lvwKunder_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -145,8 +163,8 @@ namespace JavaWaterSport.View
             }
             catch(Exception)
             {
-               // MessageBox.Show("Ett fel har uppståt");
+               
             }
-        }        
+        }            
     }
 }

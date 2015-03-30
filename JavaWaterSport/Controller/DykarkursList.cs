@@ -35,6 +35,7 @@ namespace JavaWaterSport.Controller
         public void Remove(Dykarkurs item)
         {
             d_dykarkursList.Remove(item);
+            OnUpdated();
         }
 
         public Dykarkurs Get(int index)

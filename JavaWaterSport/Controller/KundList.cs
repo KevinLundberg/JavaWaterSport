@@ -48,7 +48,8 @@ namespace JavaWaterSport.Controller
 
 		public void Remove(Kund item)
 		{
-			throw new NotImplementedException();
+            k_kundList.Remove(item);
+            OnUpdated();
 		}
 
 		public Kund Get(int index)
