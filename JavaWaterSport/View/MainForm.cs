@@ -1,4 +1,5 @@
 ﻿using JavaWaterSport.DAL;
+using JavaWaterSportSystem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,7 +65,7 @@ namespace JavaWaterSport.View
         {
             try
             {
-                DataAccessLayerDBA dba = new DataAccessLayerDBA();
+                ServiceProvider.GetKundService().SaveToDBA();
                
             }
             catch (Exception ex)

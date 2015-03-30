@@ -54,14 +54,14 @@ namespace JavaWaterSport.DAL
             }
         }
 
-        public void SaveMoviesToDatabase()
+        public void SaveKunderToDatabase()
         {
             msqlConnection.Open();
             string sqlString;
             List<string> sqlList = new List<string>();
             KundList kunder = ServiceProvider.GetKundService();
             SqlCommand cmd;
-            sqlString = "delete from dbo.movies;";
+            sqlString = "delete from dbo.kunder;";
             try
             {
                 cmd = new SqlCommand(sqlString, msqlConnection);

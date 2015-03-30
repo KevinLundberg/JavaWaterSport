@@ -96,5 +96,11 @@ namespace JavaWaterSport.Controller
 
             return true;
         }
+
+        public void SaveToDBA()
+        {
+            DataAccessLayerDBA dba = new DataAccessLayerDBA();
+            dba.SaveKunderToDatabase();
+        }
     }
 }
