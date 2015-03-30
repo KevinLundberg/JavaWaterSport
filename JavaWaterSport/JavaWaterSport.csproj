@@ -50,6 +50,7 @@
     <Compile Include="Controller\UtrustningList.cs" />
     <Compile Include="CustomException\CustomException.cs" />
     <Compile Include="DAL\BinarySerialization.cs" />
+    <Compile Include="DAL\DataAccessLayerDBA.cs" />
     <Compile Include="Model\Dykarkurs.cs" />
     <Compile Include="Model\Dykarkurs_kopia.cs" />
     <Compile Include="Model\Dykarkurs_boka.cs" />

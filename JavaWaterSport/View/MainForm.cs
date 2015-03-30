@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JavaWaterSport.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,6 +58,21 @@ namespace JavaWaterSport.View
         {
             NyDykarkurs läggtillDykarkurs = new NyDykarkurs();
             läggtillDykarkurs.Show();
+        }
+
+        private void sparaKunderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataAccessLayerDBA dba = new DataAccessLayerDBA();
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+
         }
     }
 }

@@ -197,6 +197,7 @@
             this.sparaKunderToolStripMenuItem.Name = "sparaKunderToolStripMenuItem";
             this.sparaKunderToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.sparaKunderToolStripMenuItem.Text = "Spara kunder";
+            this.sparaKunderToolStripMenuItem.Click += new System.EventHandler(this.sparaKunderToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
