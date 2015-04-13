@@ -14,7 +14,7 @@ namespace JavaWaterSport.DAL
     {
 
         private SqlConnection msqlConnection;
-        private SqlDataAdapter mMoviesAdapter;
+        private SqlDataAdapter mKunderAdapter;
         private DataSet mDataSet;
         private String mConnectionString;
 
@@ -26,12 +26,12 @@ namespace JavaWaterSport.DAL
 
             msqlConnection.Open();
 
-            CreateIfNotCreateIfNotExists();
+            CreateIfNotExists();
 
             msqlConnection.Close();
         }
         
-        private void CreateIfNotCreateIfNotExists()
+        private void CreateIfNotExists()
         {
             List<string> sqlList = new List<string>();
 
@@ -61,7 +61,7 @@ namespace JavaWaterSport.DAL
             List<string> sqlList = new List<string>();
             KundList kunder = ServiceProvider.GetKundService();
             SqlCommand cmd;
-            sqlString = "delete from dbo.kunder;";
+            sqlString = "delete from dbo.kund;";
             try
             {
                 cmd = new SqlCommand(sqlString, msqlConnection);
@@ -74,10 +74,7 @@ namespace JavaWaterSport.DAL
 
             for (int i = 0; i < kunder.Count(); i++)
             {
-                sqlString = "insert into dbo.movies(id,title,genre,directorid,age,path,runtime) values(" +
-                            kunder.Get(i).ID + ",'" +
-                            kunder.Get(i).PersonligID + "','" +
-                            kunder.Get(i).Namn + "'," + ");";
+                sqlString = "insert into dbo.kund(ID, PersonligID, Namn) values(" + kunder.Get(i).ID + ",'" + kunder.Get(i).PersonligID + "','" + kunder.Get(i).Namn + "'," + ");";
                 try
                 {
                     cmd = new SqlCommand(sqlString, msqlConnection);
