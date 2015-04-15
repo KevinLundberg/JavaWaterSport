@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BokningsList.cs" />
     <Compile Include="Controller\DykarkursList.cs" />
     <Compile Include="Controller\IListor.cs" />
     <Compile Include="Controller\KundList.cs" />

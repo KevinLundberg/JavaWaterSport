@@ -72,8 +72,6 @@ namespace JavaWaterSport.View
             {
                 MessageBox.Show(ex.Message);
             }
-            
-
         }
 
         private void sparaDykarkurserToolStripMenuItem_Click(object sender, EventArgs e)
