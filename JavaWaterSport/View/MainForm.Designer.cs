@@ -109,6 +109,7 @@
             this.sparaDykarkurserToolStripMenuItem.Name = "sparaDykarkurserToolStripMenuItem";
             this.sparaDykarkurserToolStripMenuItem.Size = new System.Drawing.Size(265, 22);
             this.sparaDykarkurserToolStripMenuItem.Text = "Spara dykarkurser";
+            this.sparaDykarkurserToolStripMenuItem.Click += new System.EventHandler(this.sparaDykarkurserToolStripMenuItem_Click);
             // 
             // utrustningToolStripMenuItem
             // 

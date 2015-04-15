@@ -37,7 +37,9 @@ namespace JavaWaterSport.DAL
 
             sqlList.Add("USE JwatterSports");
             sqlList.Add("DROP TABLE [dbo].[Kund];");
-            sqlList.Add("CREATE TABLE [dbo].[Kund] ([Id] INT NOT NULL, [PersonligID] VARCHAR (50) NULL, [Namn] VARCHAR (50) NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");
+            sqlList.Add("DROP TABLE [dbo].[Dykarkurs];");
+            sqlList.Add("CREATE TABLE [dbo].[Kund] ([Id] INT NOT NULL, [PersonligID] VARCHAR (50) NULL, [Namn] VARCHAR (50) NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");            
+            sqlList.Add("CREATE TABLE [dbo].[Dykarkurs] ([Id] INT NOT NULL, [Tid] VARCHAR (50) NULL, [Dykinstruktör] VARCHAR (50) NULL, [Datum] VARCHAR (50) NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");
 
             SqlCommand cmd;
             foreach (var sql in sqlList)
@@ -74,7 +76,42 @@ namespace JavaWaterSport.DAL
 
             for (int i = 0; i < kunder.Count(); i++)
             {
-                sqlString = "insert into dbo.kund(ID, PersonligID, Namn) values(" + kunder.Get(i).ID + ",'" + kunder.Get(i).PersonligID + "','" + kunder.Get(i).Namn + "'," + ");";
+                sqlString = "insert into dbo.kund(ID, PersonligID, Namn) values(" + kunder.Get(i).ID + ",'" + kunder.Get(i).PersonligID + "','" + kunder.Get(i).Namn + "');";
+                try
+                {
+                    cmd = new SqlCommand(sqlString, msqlConnection);
+                    cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+
+            msqlConnection.Close();
+        }
+
+        public void SaveDykarkurserToDatabase()
+        {
+            msqlConnection.Open();
+            string sqlString;
+            List<string> sqlList = new List<string>();
+            DykarkursList dykkurs = ServiceProvider.GetDykarkursService();
+            SqlCommand cmd;
+            sqlString = "delete from dbo.dykarkurs;";
+            try
+            {
+                cmd = new SqlCommand(sqlString, msqlConnection);
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                throw;
+            }
+
+            for (int i = 0; i < dykkurs.Count(); i++)
+            {
+                sqlString = "insert into dbo.dykarkurs(ID, Tid, Dykinstruktör, Datum) values(" + dykkurs.Get(i).ID + ",'" + dykkurs.Get(i).getTid() + "','" + dykkurs.Get(i).getDykinstruktör() + "','" + dykkurs.Get(i).getDatum() + "');";
                 try
                 {
                     cmd = new SqlCommand(sqlString, msqlConnection);

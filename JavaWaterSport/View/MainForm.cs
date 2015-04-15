@@ -75,5 +75,17 @@ namespace JavaWaterSport.View
             
 
         }
+
+        private void sparaDykarkurserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ServiceProvider.GetDykarkursService().SaveToDBA();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);               
+            }
+        }
     }
 }

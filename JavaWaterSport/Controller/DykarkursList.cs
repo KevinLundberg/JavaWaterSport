@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using JavaWaterSport.Service;
 using JavaWaterSport.Controller;
 using JavaWaterSport.Model;
+using JavaWaterSport.DAL;
 
 namespace JavaWaterSport.Controller
 {
@@ -80,6 +81,12 @@ namespace JavaWaterSport.Controller
         public int NextID()
         {
             return d_dykarkursList.Count() + 1;
+        }
+
+        public void SaveToDBA()
+        {
+            DataAccessLayerDBA dba = new DataAccessLayerDBA();
+            dba.SaveDykarkurserToDatabase();
         }
     }
 }
