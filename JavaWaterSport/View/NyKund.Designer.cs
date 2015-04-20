@@ -37,7 +37,7 @@
             this.tbxPersonligID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lvwUtrustning = new System.Windows.Forms.ListView();
+            this.lvwBokningar = new System.Windows.Forms.ListView();
             this.lvwDykarkurs = new System.Windows.Forms.ListView();
             this.btnBokaUtrustning = new System.Windows.Forms.Button();
             this.btnBokaDykarkurs = new System.Windows.Forms.Button();
@@ -111,9 +111,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(432, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 20);
+            this.label5.Size = new System.Drawing.Size(112, 20);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Bokning av utrustning";
+            this.label5.Text = "Bokade kurser";
             // 
             // label8
             // 
@@ -125,13 +125,13 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Bokning av dykarkurs";
             // 
-            // lvwUtrustning
+            // lvwBokningar
             // 
-            this.lvwUtrustning.Location = new System.Drawing.Point(436, 55);
-            this.lvwUtrustning.Name = "lvwUtrustning";
-            this.lvwUtrustning.Size = new System.Drawing.Size(276, 226);
-            this.lvwUtrustning.TabIndex = 16;
-            this.lvwUtrustning.UseCompatibleStateImageBehavior = false;
+            this.lvwBokningar.Location = new System.Drawing.Point(436, 55);
+            this.lvwBokningar.Name = "lvwBokningar";
+            this.lvwBokningar.Size = new System.Drawing.Size(276, 226);
+            this.lvwBokningar.TabIndex = 16;
+            this.lvwBokningar.UseCompatibleStateImageBehavior = false;
             // 
             // lvwDykarkurs
             // 
@@ -148,7 +148,7 @@
             this.btnBokaUtrustning.Name = "btnBokaUtrustning";
             this.btnBokaUtrustning.Size = new System.Drawing.Size(276, 23);
             this.btnBokaUtrustning.TabIndex = 18;
-            this.btnBokaUtrustning.Text = "Boka Utrustning";
+            this.btnBokaUtrustning.Text = "Visa Bokningar";
             this.btnBokaUtrustning.UseVisualStyleBackColor = true;
             // 
             // btnBokaDykarkurs
@@ -180,7 +180,7 @@
             this.Controls.Add(this.btnBokaDykarkurs);
             this.Controls.Add(this.btnBokaUtrustning);
             this.Controls.Add(this.lvwDykarkurs);
-            this.Controls.Add(this.lvwUtrustning);
+            this.Controls.Add(this.lvwBokningar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbxPersonligID);
@@ -208,7 +208,7 @@
         private System.Windows.Forms.TextBox tbxPersonligID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListView lvwUtrustning;
+        private System.Windows.Forms.ListView lvwBokningar;
         private System.Windows.Forms.ListView lvwDykarkurs;
         private System.Windows.Forms.Button btnBokaUtrustning;
         private System.Windows.Forms.Button btnBokaDykarkurs;

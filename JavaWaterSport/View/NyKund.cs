@@ -17,6 +17,7 @@ namespace JavaWaterSport.View
     {
         private KundList kundList;
         private DykarkursList dykList;
+        private BokningsList bokList;
 
         public NyKund()
         {
@@ -36,6 +37,16 @@ namespace JavaWaterSport.View
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            try
+            {
+                bokList = ServiceProvider
+            }
+            catch (Exception ex)
+            {                
                 MessageBox.Show(ex.Message);
                 return;
             }
@@ -72,10 +83,20 @@ namespace JavaWaterSport.View
             lvwDykarkurs.FullRowSelect = true;
             lvwDykarkurs.GridLines = true;
 
+            //Lägg till kolummner
             lvwDykarkurs.Columns.Add("ID", -2, HorizontalAlignment.Left);
             lvwDykarkurs.Columns.Add("Tid     ", -2, HorizontalAlignment.Left);
             lvwDykarkurs.Columns.Add("Dykinstruktör", -2, HorizontalAlignment.Left);
             lvwDykarkurs.Columns.Add("Datum", -2, HorizontalAlignment.Left);
+
+            //Egenskaper för boknings-listview
+            lvwBokningar.FullRowSelect = true;
+            lvwBokningar.GridLines = true;
+
+            //Lägg till kolummner
+            lvwBokningar.Columns.Add("ID", -2, HorizontalAlignment.Left);
+            lvwBokningar.Columns.Add("Kund ID", -2, HorizontalAlignment.Left);
+            lvwBokningar.Columns.Add("Kurs ID", -2, HorizontalAlignment.Left);
 
             updateListView();
             updateDykListView();
@@ -147,7 +168,7 @@ namespace JavaWaterSport.View
 
         private void btnBokaDykarkurs_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void lvwKunder_SelectedIndexChanged(object sender, EventArgs e)
