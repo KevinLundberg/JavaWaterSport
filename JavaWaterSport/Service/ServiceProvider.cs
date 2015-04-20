@@ -11,6 +11,8 @@ namespace JavaWaterSportSystem
     {
         static KundList _kundService;
         static DykarkursList _dykarkursService;
+        static BokningsList _bokningsService;
+
         public static DykarkursList GetDykarkursService()
         {
             if (_dykarkursService == null)
@@ -45,6 +47,25 @@ namespace JavaWaterSportSystem
             }
 
             return _kundService; 
+        }
+
+        public static BokningsList GetBokningsService()
+        {
+            if (_bokningsService == null)
+            {
+                try
+                {
+                    _bokningsService = new BokningsList();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+            }
+
+            return _bokningsService;
         }
     }
 }
