@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using JavaWaterSport.DAL;
 using JavaWaterSportSystem;
 using JavaWaterSport.Controller;
+using JavaWaterSport.Model;
 
 namespace JavaWaterSport.View
 {
@@ -18,6 +19,7 @@ namespace JavaWaterSport.View
         private KundList kundList;
         private DykarkursList dykList;
         private BokningsList bokList;
+                
 
         public NyKund()
         {
@@ -43,7 +45,7 @@ namespace JavaWaterSport.View
 
             try
             {
-                bokList = ServiceProvider
+                bokList = ServiceProvider.GetBokningsService();
             }
             catch (Exception ex)
             {                
@@ -54,10 +56,15 @@ namespace JavaWaterSport.View
             InitializeComponent();
             dykList.Updated += new EventHandler(dykService_Update);            
             kundList.Updated += new EventHandler(kundService_Update);
+            bokList.Updated += new EventHandler(bokList_Update);
             initListView();
         }
 
-
+        private void bokList_Update(object sender, EventArgs e)
+        {
+            updateBokListView();
+        }
+                
         private void dykService_Update(object sender, EventArgs e)
         {
  	        updateDykListView();
@@ -134,6 +141,21 @@ namespace JavaWaterSport.View
                 lvwDykarkurs.Items.Add(item);
             }
         }
+        private void updateBokListView()
+        {
+            lvwBokningar.Items.Clear();
+            string[] columns = new string[3];
+            ListViewItem item;
+
+            for (int i = 0; i < bokList.Count(); i++)
+            {
+                columns[0] = bokList.Get(i).id.ToString();
+                columns[1] = bokList.Get(i).kundID.ToString();
+                columns[2] = bokList.Get(i).kursID.ToString();
+                item = new ListViewItem(columns);
+                lvwBokningar.Items.Add(item);
+            }
+        }
 
         private void btnTaBortKund_Click(object sender, EventArgs e)
         {
@@ -161,14 +183,20 @@ namespace JavaWaterSport.View
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Fyll i alla uppgifter!");
             }
         }
 
         private void btnBokaDykarkurs_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                bokList.Add(new Dykarkurs_boka(Convert.ToInt32(lblKundID.Text), Convert.ToInt32(lblKursID.Text)));
+            }
+            catch (Exception)
+            {                
+                MessageBox.Show("Fel");
+            }
         }
 
         private void lvwKunder_SelectedIndexChanged(object sender, EventArgs e)
@@ -181,11 +209,26 @@ namespace JavaWaterSport.View
                 Kund kund = kundList.Find(kundID);
                 tbxNamn.Text = kund.Namn;
                 tbxPersonligID.Text = kund.PersonligID;
+                lblKundID.Text = kundID;
+
             }
             catch(Exception)
             {
                
             }
-        }            
+        }
+
+        private void lvwDykarkurs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string kursID = lvwDykarkurs.SelectedItems[0].Text;
+                lblKursID.Text = kursID;               
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
     }
 }

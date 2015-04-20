@@ -17,6 +17,7 @@ namespace JavaWaterSport.View
     public partial class NyDykarkurs : Form
     {
         private DykarkursList dykarkursLista;
+               
         public NyDykarkurs()
         {        
             
@@ -124,7 +125,7 @@ namespace JavaWaterSport.View
                 Dykarkurs dykarkurs = dykarkursLista.Find(dykarkursID);
                 tbxDatum.Text = dykarkurs.getDatum();
                 tbxTid.Text = dykarkurs.getTid();
-                cbxDykinstruktörer.Text = dykarkurs.getDykinstruktör();               
+                cbxDykinstruktörer.Text = dykarkurs.getDykinstruktör();
             }
 
             catch (Exception)

@@ -34,7 +34,6 @@ namespace JavaWaterSport.Controller
             }
             catch (Exception ex)
             {
-
                 throw new CustomException(ex.Message);
             }
         }

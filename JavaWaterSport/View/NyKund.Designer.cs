@@ -42,6 +42,8 @@
             this.btnBokaUtrustning = new System.Windows.Forms.Button();
             this.btnBokaDykarkurs = new System.Windows.Forms.Button();
             this.btnTaBortKund = new System.Windows.Forms.Button();
+            this.lblKursID = new System.Windows.Forms.Label();
+            this.lblKundID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnRegistreraKund
@@ -132,6 +134,7 @@
             this.lvwBokningar.Size = new System.Drawing.Size(276, 226);
             this.lvwBokningar.TabIndex = 16;
             this.lvwBokningar.UseCompatibleStateImageBehavior = false;
+            this.lvwBokningar.View = System.Windows.Forms.View.Details;
             // 
             // lvwDykarkurs
             // 
@@ -141,6 +144,7 @@
             this.lvwDykarkurs.TabIndex = 17;
             this.lvwDykarkurs.UseCompatibleStateImageBehavior = false;
             this.lvwDykarkurs.View = System.Windows.Forms.View.Details;
+            this.lvwDykarkurs.SelectedIndexChanged += new System.EventHandler(this.lvwDykarkurs_SelectedIndexChanged);
             // 
             // btnBokaUtrustning
             // 
@@ -171,11 +175,31 @@
             this.btnTaBortKund.UseVisualStyleBackColor = true;
             this.btnTaBortKund.Click += new System.EventHandler(this.btnTaBortKund_Click);
             // 
+            // lblKursID
+            // 
+            this.lblKursID.AutoSize = true;
+            this.lblKursID.Location = new System.Drawing.Point(309, 13);
+            this.lblKursID.Name = "lblKursID";
+            this.lblKursID.Size = new System.Drawing.Size(35, 13);
+            this.lblKursID.TabIndex = 21;
+            this.lblKursID.Text = "label4";
+            // 
+            // lblKundID
+            // 
+            this.lblKundID.AutoSize = true;
+            this.lblKundID.Location = new System.Drawing.Point(309, 41);
+            this.lblKundID.Name = "lblKundID";
+            this.lblKundID.Size = new System.Drawing.Size(35, 13);
+            this.lblKundID.TabIndex = 22;
+            this.lblKundID.Text = "label6";
+            // 
             // NyKund
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 626);
+            this.Controls.Add(this.lblKundID);
+            this.Controls.Add(this.lblKursID);
             this.Controls.Add(this.btnTaBortKund);
             this.Controls.Add(this.btnBokaDykarkurs);
             this.Controls.Add(this.btnBokaUtrustning);
@@ -213,5 +237,7 @@
         private System.Windows.Forms.Button btnBokaUtrustning;
         private System.Windows.Forms.Button btnBokaDykarkurs;
         private System.Windows.Forms.Button btnTaBortKund;
+        private System.Windows.Forms.Label lblKursID;
+        private System.Windows.Forms.Label lblKundID;
     }
 }
