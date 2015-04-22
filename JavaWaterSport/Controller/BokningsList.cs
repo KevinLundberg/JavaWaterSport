@@ -41,7 +41,7 @@ namespace JavaWaterSport.Controller
 
         public void Add(Dykarkurs_boka item)
         {
-            item.id = this.NextID();
+            item.ID = this.NextID();
             b_bokningsList.Add(item);
             OnUpdated();
         }
@@ -65,7 +65,7 @@ namespace JavaWaterSport.Controller
         public Dykarkurs_boka Find(string strFind)
         {
 
-            var me = (from dykarkurs_boka in b_bokningsList where dykarkurs_boka.id.ToString() == strFind select dykarkurs_boka).First();
+            var me = (from dykarkurs_boka in b_bokningsList where dykarkurs_boka.ID.ToString() == strFind select dykarkurs_boka).First();
             return me;
         }
 
@@ -87,9 +87,6 @@ namespace JavaWaterSport.Controller
             }
 
             return true;
-        }
-
-
-       
+        }              
     }
 }

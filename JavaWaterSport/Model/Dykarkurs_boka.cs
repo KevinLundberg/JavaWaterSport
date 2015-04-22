@@ -8,32 +8,32 @@ namespace JavaWaterSport.Model
 {
     class Dykarkurs_boka
     {
-        private int ID;
-        private int KundID;
-        private int KursID;
+        private int id;
+        private int kundId;
+        private int kursId;
 
-        public int id
+        public int ID
         {
-            get { return ID; }
-            set { ID = value; }
+            get { return id; }
+            set { id = value; }
         }
 
-        public int kundID
+        public int KundID
         {
-            get { return kundID; }
-            set { kundID = value; }
+            get { return kundId; }
+            set { kundId = value; }
         }
 
-        public int kursID
+        public int KursID
         {
-            get { return KursID; }
-            set { KursID = value; }
+            get { return kursId; }
+            set { kursId = value; }
         }
 
-        public Dykarkurs_boka(int KundId, int KursId)
+        public Dykarkurs_boka(int kundID, int kursID)
         {
-            this.KundID = KundId;
-            this.KursID = KursId;
+            this.kundId = kundID;
+            this.kursId = kursID;
         }
 
 

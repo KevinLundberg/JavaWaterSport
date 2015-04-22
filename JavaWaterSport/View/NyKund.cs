@@ -18,8 +18,7 @@ namespace JavaWaterSport.View
     {
         private KundList kundList;
         private DykarkursList dykList;
-        private BokningsList bokList;
-                
+        private BokningsList bokList;                
 
         public NyKund()
         {
@@ -131,9 +130,9 @@ namespace JavaWaterSport.View
 
             for (int i = 0; i < bokList.Count(); i++)
             {
-                columns[0] = bokList.Get(i).id.ToString();
-                columns[1] = bokList.Get(i).kundID.ToString();
-                columns[2] = bokList.Get(i).kursID.ToString();
+                columns[0] = bokList.Get(i).ID.ToString();
+                columns[1] = bokList.Get(i).KundID.ToString();
+                columns[2] = bokList.Get(i).KursID.ToString();
                 item = new ListViewItem(columns);
                 lvwBokningar.Items.Add(item);
             }
