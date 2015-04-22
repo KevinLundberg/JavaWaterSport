@@ -39,11 +39,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lvwBokningar = new System.Windows.Forms.ListView();
             this.lvwDykarkurs = new System.Windows.Forms.ListView();
-            this.btnBokaUtrustning = new System.Windows.Forms.Button();
+            this.btnVisaBokning = new System.Windows.Forms.Button();
             this.btnBokaDykarkurs = new System.Windows.Forms.Button();
             this.btnTaBortKund = new System.Windows.Forms.Button();
             this.lblKursID = new System.Windows.Forms.Label();
             this.lblKundID = new System.Windows.Forms.Label();
+            this.btnTaBortBokning = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRegistreraKund
@@ -85,11 +86,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 136);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 132);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Kunder:";
+            this.label2.Text = "Kunder";
             // 
             // label3
             // 
@@ -146,14 +148,14 @@
             this.lvwDykarkurs.View = System.Windows.Forms.View.Details;
             this.lvwDykarkurs.SelectedIndexChanged += new System.EventHandler(this.lvwDykarkurs_SelectedIndexChanged);
             // 
-            // btnBokaUtrustning
+            // btnVisaBokning
             // 
-            this.btnBokaUtrustning.Location = new System.Drawing.Point(436, 287);
-            this.btnBokaUtrustning.Name = "btnBokaUtrustning";
-            this.btnBokaUtrustning.Size = new System.Drawing.Size(276, 23);
-            this.btnBokaUtrustning.TabIndex = 18;
-            this.btnBokaUtrustning.Text = "Visa Bokningar";
-            this.btnBokaUtrustning.UseVisualStyleBackColor = true;
+            this.btnVisaBokning.Location = new System.Drawing.Point(436, 287);
+            this.btnVisaBokning.Name = "btnVisaBokning";
+            this.btnVisaBokning.Size = new System.Drawing.Size(131, 23);
+            this.btnVisaBokning.TabIndex = 18;
+            this.btnVisaBokning.Text = "Visa Bokning";
+            this.btnVisaBokning.UseVisualStyleBackColor = true;
             // 
             // btnBokaDykarkurs
             // 
@@ -180,29 +182,42 @@
             this.lblKursID.AutoSize = true;
             this.lblKursID.Location = new System.Drawing.Point(309, 13);
             this.lblKursID.Name = "lblKursID";
-            this.lblKursID.Size = new System.Drawing.Size(35, 13);
+            this.lblKursID.Size = new System.Drawing.Size(39, 13);
             this.lblKursID.TabIndex = 21;
-            this.lblKursID.Text = "label4";
+            this.lblKursID.Text = "KursID";
+            this.lblKursID.Visible = false;
             // 
             // lblKundID
             // 
             this.lblKundID.AutoSize = true;
             this.lblKundID.Location = new System.Drawing.Point(309, 41);
             this.lblKundID.Name = "lblKundID";
-            this.lblKundID.Size = new System.Drawing.Size(35, 13);
+            this.lblKundID.Size = new System.Drawing.Size(43, 13);
             this.lblKundID.TabIndex = 22;
-            this.lblKundID.Text = "label6";
+            this.lblKundID.Text = "KundID";
+            this.lblKundID.Visible = false;
+            // 
+            // btnTaBortBokning
+            // 
+            this.btnTaBortBokning.Location = new System.Drawing.Point(581, 287);
+            this.btnTaBortBokning.Name = "btnTaBortBokning";
+            this.btnTaBortBokning.Size = new System.Drawing.Size(131, 23);
+            this.btnTaBortBokning.TabIndex = 23;
+            this.btnTaBortBokning.Text = "Ta bort bokning";
+            this.btnTaBortBokning.UseVisualStyleBackColor = true;
+            this.btnTaBortBokning.Click += new System.EventHandler(this.btnTaBortBokning_Click);
             // 
             // NyKund
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 626);
+            this.Controls.Add(this.btnTaBortBokning);
             this.Controls.Add(this.lblKundID);
             this.Controls.Add(this.lblKursID);
             this.Controls.Add(this.btnTaBortKund);
             this.Controls.Add(this.btnBokaDykarkurs);
-            this.Controls.Add(this.btnBokaUtrustning);
+            this.Controls.Add(this.btnVisaBokning);
             this.Controls.Add(this.lvwDykarkurs);
             this.Controls.Add(this.lvwBokningar);
             this.Controls.Add(this.label8);
@@ -234,10 +249,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListView lvwBokningar;
         private System.Windows.Forms.ListView lvwDykarkurs;
-        private System.Windows.Forms.Button btnBokaUtrustning;
+        private System.Windows.Forms.Button btnVisaBokning;
         private System.Windows.Forms.Button btnBokaDykarkurs;
         private System.Windows.Forms.Button btnTaBortKund;
         private System.Windows.Forms.Label lblKursID;
         private System.Windows.Forms.Label lblKundID;
+        private System.Windows.Forms.Button btnTaBortBokning;
     }
 }

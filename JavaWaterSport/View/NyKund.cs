@@ -177,9 +177,43 @@ namespace JavaWaterSport.View
             }
             catch (Exception)
             {                
-                MessageBox.Show("Fel");
+                MessageBox.Show("Markera i respektive lista");
             }
         }
+
+        private void btnTaBortBokning_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string bokningsID = lvwBokningar.SelectedItems[0].Text;
+                Dykarkurs_boka bokning = bokList.Find(bokningsID);
+                bokList.Remove(bokning);                
+            }
+
+            catch
+            {
+                MessageBox.Show("Markera en bokning för att radera!");
+            }
+        }
+
+        //private void AddTestData()
+        //{
+        //    Kund item = new Kund("15", "Määk");
+        //    item = new Kund("17", "Kenny");
+        //    item = new Kund("3", "Benny");
+        //    item = new Kund("5", "Uffe");
+        //    item = new Kund("8", "Thörn");
+        //    kundList.Add(item);
+
+        //    Dykarkurs items = new Dykarkurs("2", "Yngve", "15-02-15");
+        //    items = new Dykarkurs("2", "Anton", "15-02-15");
+        //    items = new Dykarkurs("2", "Button", "15-02-15");
+        //    items = new Dykarkurs("2", "Macke", "15-02-15");
+        //    dykList.Add(items);
+
+        //    updateListView();
+        //    updateDykListView();
+        //}
 
         private void lvwKunder_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -211,6 +245,6 @@ namespace JavaWaterSport.View
             {
                 
             }
-        }
+        }        
     }
 }
