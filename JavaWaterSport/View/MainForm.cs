@@ -88,7 +88,28 @@ namespace JavaWaterSport.View
 
         private void sparaBokningarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ServiceProvider.GetBokningsService().SaveToDBA();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void sparaTillFilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ServiceProvider.GetBokningsService().BinarySerialize();
+                ServiceProvider.GetDykarkursService().BinarySerialize();
+                ServiceProvider.GetKundService().BinarySerialize();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

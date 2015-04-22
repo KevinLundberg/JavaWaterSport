@@ -48,8 +48,11 @@
             this.bokaDykarkursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hyrUtrustningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sparaKunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sparaBokningarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sparaTillDatabasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sparaTillFilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +62,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dykarkurserToolStripMenuItem,
             this.utrustningToolStripMenuItem,
-            this.kunderToolStripMenuItem});
+            this.kunderToolStripMenuItem,
+            this.saveToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(624, 24);
@@ -202,6 +206,13 @@
             this.sparaKunderToolStripMenuItem.Text = "Spara kunder";
             this.sparaKunderToolStripMenuItem.Click += new System.EventHandler(this.sparaKunderToolStripMenuItem_Click);
             // 
+            // sparaBokningarToolStripMenuItem
+            // 
+            this.sparaBokningarToolStripMenuItem.Name = "sparaBokningarToolStripMenuItem";
+            this.sparaBokningarToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.sparaBokningarToolStripMenuItem.Text = "Spara bokningar";
+            this.sparaBokningarToolStripMenuItem.Click += new System.EventHandler(this.sparaBokningarToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -211,12 +222,27 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // sparaBokningarToolStripMenuItem
+            // saveToolStripMenuItem
             // 
-            this.sparaBokningarToolStripMenuItem.Name = "sparaBokningarToolStripMenuItem";
-            this.sparaBokningarToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.sparaBokningarToolStripMenuItem.Text = "Spara bokningar";
-            this.sparaBokningarToolStripMenuItem.Click += new System.EventHandler(this.sparaBokningarToolStripMenuItem_Click);
+            this.saveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sparaTillDatabasToolStripMenuItem,
+            this.sparaTillFilToolStripMenuItem});
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.saveToolStripMenuItem.Text = "Spara";
+            // 
+            // sparaTillDatabasToolStripMenuItem
+            // 
+            this.sparaTillDatabasToolStripMenuItem.Name = "sparaTillDatabasToolStripMenuItem";
+            this.sparaTillDatabasToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.sparaTillDatabasToolStripMenuItem.Text = "Spara till databas";
+            // 
+            // sparaTillFilToolStripMenuItem
+            // 
+            this.sparaTillFilToolStripMenuItem.Name = "sparaTillFilToolStripMenuItem";
+            this.sparaTillFilToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.sparaTillFilToolStripMenuItem.Text = "Spara till fil";
+            this.sparaTillFilToolStripMenuItem.Click += new System.EventHandler(this.sparaTillFilToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -259,5 +285,8 @@
         private System.Windows.Forms.ToolStripMenuItem sparaKunderToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem sparaBokningarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sparaTillDatabasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sparaTillFilToolStripMenuItem;
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace JavaWaterSport.Model
 {
+    [Serializable]
     class Dykarkurs_boka
     {
         private int id;

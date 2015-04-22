@@ -7,6 +7,7 @@ using JavaWaterSport.Service;
 using JavaWaterSport.Controller;
 using JavaWaterSport.Model;
 using JavaWaterSport.DAL;
+using System.IO;
 
 namespace JavaWaterSport.Controller
 {
@@ -24,6 +25,18 @@ namespace JavaWaterSport.Controller
         public DykarkursList()
         {
             d_dykarkursList = new List<Dykarkurs>();
+            try
+            {
+                if (File.Exists("DykarkursLista.DAT"))
+                {
+                    d_dykarkursList = BinarySerialization<List<Dykarkurs>>.BinaryDeSerialize("DykarkursLista.DAT");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new CustomException(ex.Message);
+            }
         }
 
         public void Add(Dykarkurs item)
@@ -87,6 +100,21 @@ namespace JavaWaterSport.Controller
         {
             DataAccessLayerDBA dba = new DataAccessLayerDBA();
             dba.SaveDykarkurserToDatabase();
+        }
+
+        public bool BinarySerialize()
+        {
+            try
+            {
+                BinarySerialization<List<Dykarkurs>>.FileName = "DykarkursLista.DAT";
+                BinarySerialization<List<Dykarkurs>>.BinarySerialize(d_dykarkursList);
+            }
+            catch (Exception ex)
+            {
+                throw new CustomException(ex.Message);
+            }
+
+            return true;
         }
     }
 }
