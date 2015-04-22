@@ -26,29 +26,11 @@ namespace JavaWaterSport.View
             try
             {
                 kundList = ServiceProvider.GetKundService();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-
-            try
-            {
                 dykList = ServiceProvider.GetDykarkursService();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-
-            try
-            {
                 bokList = ServiceProvider.GetBokningsService();
             }
             catch (Exception ex)
-            {                
+            {
                 MessageBox.Show(ex.Message);
                 return;
             }
@@ -191,7 +173,8 @@ namespace JavaWaterSport.View
         {
             try
             {
-                bokList.Add(new Dykarkurs_boka(Convert.ToInt32(lblKundID.Text), Convert.ToInt32(lblKursID.Text)));
+                Dykarkurs_boka item = new Dykarkurs_boka(Convert.ToInt32(lblKundID.Text), Convert.ToInt32(lblKursID.Text));
+                bokList.Add(item);
             }
             catch (Exception)
             {                
