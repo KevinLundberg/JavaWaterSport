@@ -49,6 +49,7 @@
             this.hyrUtrustningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sparaKunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sparaBokningarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -160,7 +161,8 @@
             this.registreraNyKundToolStripMenuItem,
             this.bokaDykarkursToolStripMenuItem,
             this.hyrUtrustningToolStripMenuItem,
-            this.sparaKunderToolStripMenuItem});
+            this.sparaKunderToolStripMenuItem,
+            this.sparaBokningarToolStripMenuItem});
             this.kunderToolStripMenuItem.Name = "kunderToolStripMenuItem";
             this.kunderToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.kunderToolStripMenuItem.Text = "Kunder";
@@ -209,6 +211,13 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // sparaBokningarToolStripMenuItem
+            // 
+            this.sparaBokningarToolStripMenuItem.Name = "sparaBokningarToolStripMenuItem";
+            this.sparaBokningarToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.sparaBokningarToolStripMenuItem.Text = "Spara bokningar";
+            this.sparaBokningarToolStripMenuItem.Click += new System.EventHandler(this.sparaBokningarToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,5 +258,6 @@
         private System.Windows.Forms.ToolStripMenuItem sparaUtrustningarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sparaKunderToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem sparaBokningarToolStripMenuItem;
     }
 }

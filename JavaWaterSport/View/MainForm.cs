@@ -85,5 +85,10 @@ namespace JavaWaterSport.View
                 MessageBox.Show(ex.Message);               
             }
         }
+
+        private void sparaBokningarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,6 +38,7 @@ namespace JavaWaterSport.DAL
             sqlList.Add("USE JwatterSports");
             sqlList.Add("DROP TABLE [dbo].[Kund];");
             sqlList.Add("DROP TABLE [dbo].[Dykarkurs];");
+            sqlList.Add("DROP TABLE [dbo].[Dykarkurs_boka];");
             sqlList.Add("CREATE TABLE [dbo].[Kund] ([Id] INT NOT NULL, [PersonligID] VARCHAR (50) NULL, [Namn] VARCHAR (50) NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");            
             sqlList.Add("CREATE TABLE [dbo].[Dykarkurs] ([Id] INT NOT NULL, [Tid] VARCHAR (50) NULL, [Dykinstruktör] VARCHAR (50) NULL, [Datum] VARCHAR (50) NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");
 
