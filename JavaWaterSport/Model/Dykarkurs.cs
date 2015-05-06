@@ -26,22 +26,19 @@ namespace JavaWaterSport.Model
         /// <summary>
         /// Konstruktor
         /// </summary>
-        /// <param name="inTid">Dykarkurs tid</param>
-        /// <param name="inDykinstruktör">Dykarkurs dykinstruktör</param>
-        /// <param name="inDatum">Dykarkurs datum</param>
+        /// <param name="tid">Dykarkurs tid</param>
+        /// <param name="dykinstruktör">Dykarkurs dykinstruktör</param>
+        /// <param name="datum">Dykarkurs datum</param>
         public Dykarkurs(string inTid, string inDykinstruktör, string inDatum)
         {
             this.tid = inTid;
             this.dykinstruktör = inDykinstruktör;
             this.datum = inDatum;
         }
-
+        
+       
+        
         // metoder
-        public int ID
-        {
-            get { return Id; }
-            set { Id = value; }
-        }
 
         /// <summary>
         /// Return dykarkursens tid.
@@ -73,7 +70,7 @@ namespace JavaWaterSport.Model
         /// <summary>
         /// Set dykarkursens tid.
         /// </summary>
-        /// <param name="inTitle">Dykarkurs tid</param>
+        /// <param name="tid">Dykarkurs tid</param>
         public void setTid(string inTid)
         {
             this.tid = inTid;
@@ -82,7 +79,7 @@ namespace JavaWaterSport.Model
         /// <summary>
         /// Set dykarkursens dykinstruktör.
         /// </summary>
-        /// <param name="inTime">Dykarkurs dykinstruktör</param>
+        /// <param name="dykinstruktör">Dykarkurs dykinstruktör</param>
         public void setDykinstruktör(string inDykinstruktör)
         {
             this.dykinstruktör = inDykinstruktör;
@@ -91,10 +88,21 @@ namespace JavaWaterSport.Model
         /// <summary>
         /// Set dykarkursens datum.
         /// </summary>
-        /// <param name="inGenre">Dykarkurs datum</param>
+        /// <param name="datum">Dykarkurs datum</param>
         public void setDatum(string inDatum)
         {
             this.datum = inDatum;
+        }
+
+        /// <summary>
+        /// Set och return dykarkursens id.
+        /// </summary>
+        /// <param name="id">Dykarkurs id</param>
+        /// /// <returns>Dykarkurs id</returns>
+        public int ID
+        {
+            get { return Id; }
+            set { Id = value; }
         }
 
         public override string ToString()

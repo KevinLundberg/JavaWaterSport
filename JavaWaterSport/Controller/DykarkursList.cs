@@ -102,6 +102,12 @@ namespace JavaWaterSport.Controller
             dba.SaveDykarkurserToDatabase();
         }
 
+        /// <summary>
+        /// BinarySerialize is a method in the MemberList class that 
+        /// Serialize (save object from the program into files) using 
+        /// binary serialization.
+        /// </summary>
+        /// <returns>true or cast an exception</returns>
         public bool BinarySerialize()
         {
             try
