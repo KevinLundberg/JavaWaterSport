@@ -59,44 +59,7 @@ namespace JavaWaterSport.View
         {
             NyDykarkurs läggtillDykarkurs = new NyDykarkurs();
             läggtillDykarkurs.Show();
-        }
-
-        private void sparaKunderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ServiceProvider.GetKundService().SaveToDBA();
-               
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void sparaDykarkurserToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ServiceProvider.GetDykarkursService().SaveToDBA();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);               
-            }
-        }
-
-        private void sparaBokningarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ServiceProvider.GetBokningsService().SaveToDBA();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        }   
 
         private void sparaTillFilToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -105,6 +68,20 @@ namespace JavaWaterSport.View
                 ServiceProvider.GetBokningsService().BinarySerialize();
                 ServiceProvider.GetDykarkursService().BinarySerialize();
                 ServiceProvider.GetKundService().BinarySerialize();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void sparaTillDatabasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ServiceProvider.GetBokningsService().SaveToDBA();
+                ServiceProvider.GetDykarkursService().SaveToDBA();
+                ServiceProvider.GetKundService().SaveToDBA();
             }
             catch (Exception ex)
             {
