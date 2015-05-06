@@ -1,4 +1,15 @@
-﻿using System;
+﻿//-------------------------------------------------------------------------------------
+// File name...................: KundList.cs
+// Purpose.....................: Att samla och hämta information
+//                               i en lista om kunden.
+//                            
+// Programmer..................: Marcus Östmo   
+// Date........................: 2014-12-03
+// Version.....................:
+// Changed.....................: 2015-03-30
+//--------------------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -1,4 +1,13 @@
-﻿using System;
+﻿//-------------------------------------------------------------------------------------
+// File name...................: Kund.cs
+// Purpose.....................: Att skapa de varibler och metoder som behövs för kunden i programmet. Samt att göra dessa åtkomliga.
+//                            
+// Programmer..................: Marcus Östmo
+// Date........................: 2014-12-03
+// Version.....................: 
+// Changed.....................: 2015-05-06
+//--------------------------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
