@@ -88,6 +88,7 @@ namespace JavaWaterSport.View
 
             updateListView();
             updateDykListView();
+            updateBokListView();
         }         
 
         private void updateListView()
