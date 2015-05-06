@@ -15,37 +15,10 @@ namespace JavaWaterSportSystem
         private string namn;
 
         /// <summary>
-        /// Set och return kundens namn
-        /// </summary>
-        public string Namn
-        {
-            get {return namn;}
-            set { namn = value; }
-        }
-
-        /// <summary>
-        /// Set och return kundens personliga ID
-        /// </summary>
-        public string PersonligID
-        {
-            get { return personligId; }
-            set { personligId = value; }
-        }
-
-        /// <summary>
-        /// Set och return ID
-        /// </summary>
-        public int ID
-        {
-            get { return id; }
-            set { id = value; }
-        }
-
-        /// <summary>
         /// Konstruktor
         /// </summary>
-        /// <param name="personligID">Kundens personliga ID</param>
-        /// <param name="name">Kundens namn</param>
+        /// <param name="personligId">Kund personligId</param>
+        /// <param name="namn">Kund namn</param>
         public Kund(string personligID, string name)
         {
             this.namn = name;
@@ -53,9 +26,38 @@ namespace JavaWaterSportSystem
         }
 
         /// <summary>
-        /// 
+        /// Set och return kundens namn.
         /// </summary>
-        /// <returns></returns>
+        /// <param name="namn">Kund namn</param>
+        /// <returns>Kund namn</returns>
+        public string Namn
+        {
+            get {return namn;}
+            set { namn = value; }
+        }
+
+        /// <summary>
+        /// Set och return kundens personliga ID.
+        /// </summary>
+        /// <param name="personligId">Kund personligId</param>
+        /// <returns>Kund namn</returns>
+        public string PersonligID
+        {
+            get { return personligId; }
+            set { personligId = value; }
+        }
+
+        /// <summary>
+        /// Set och return kundens ID.
+        /// </summary>
+        /// <param name="id">Kund id</param>
+        /// <returns>Kund id</returns>
+        public int ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
         public override string ToString()
         {
             return personligId + " | " + namn;

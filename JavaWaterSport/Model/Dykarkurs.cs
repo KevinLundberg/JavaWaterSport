@@ -98,7 +98,7 @@ namespace JavaWaterSport.Model
         /// Set och return dykarkursens id.
         /// </summary>
         /// <param name="id">Dykarkurs id</param>
-        /// /// <returns>Dykarkurs id</returns>
+        /// <returns>Dykarkurs id</returns>
         public int ID
         {
             get { return Id; }
