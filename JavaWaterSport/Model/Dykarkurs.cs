@@ -1,4 +1,13 @@
-﻿using System;
+﻿// ----------------------------------
+// File name.........: Dykarkurs.cs
+// Purpose ..........: Att skapa variabler och metoder som behövs för en dykarkurs, i modelen
+// Programmer........: Kevin Lundberg
+// Date..............: 2014-11-02
+// Version...........: 1.0
+// Changed...........: 2015-05-06
+// ------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
