@@ -131,8 +131,8 @@ namespace JavaWaterSport.View
             for (int i = 0; i < bokList.Count(); i++)
             {
                 columns[0] = bokList.Get(i).ID.ToString();
-                columns[1] = bokList.Get(i).KundID.ToString();
-                columns[2] = bokList.Get(i).KursID.ToString();
+                columns[1] = kundList.Get(bokList.Get(i).KundID).Namn; 
+                columns[2] = dykList.Get(bokList.Get(i).KursID).getDykinstruktör();
                 item = new ListViewItem(columns);
                 lvwBokningar.Items.Add(item);
             }
@@ -195,33 +195,14 @@ namespace JavaWaterSport.View
                 MessageBox.Show("Markera en bokning för att radera!");
             }
         }
-
-        //private void AddTestData()
-        //{
-        //    Kund item = new Kund("15", "Määk");
-        //    item = new Kund("17", "Kenny");
-        //    item = new Kund("3", "Benny");
-        //    item = new Kund("5", "Uffe");
-        //    item = new Kund("8", "Thörn");
-        //    kundList.Add(item);
-
-        //    Dykarkurs items = new Dykarkurs("2", "Yngve", "15-02-15");
-        //    items = new Dykarkurs("2", "Anton", "15-02-15");
-        //    items = new Dykarkurs("2", "Button", "15-02-15");
-        //    items = new Dykarkurs("2", "Macke", "15-02-15");
-        //    dykList.Add(items);
-
-        //    updateListView();
-        //    updateDykListView();
-        //}
-
+        
         private void lvwKunder_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 tbxNamn.Clear();
                 tbxPersonligID.Clear();
-                string kundID = lvwKunder.SelectedItems[0].Text;
+                string kundID = lvwKunder.SelectedItems[2].Text;
                 Kund kund = kundList.Find(kundID);
                 tbxNamn.Text = kund.Namn;
                 tbxPersonligID.Text = kund.PersonligID;
@@ -238,7 +219,7 @@ namespace JavaWaterSport.View
         {
             try
             {
-                string kursID = lvwDykarkurs.SelectedItems[0].Text;
+                string kursID = lvwDykarkurs.SelectedItems[2].Text;
                 lblKursID.Text = kursID;               
             }
             catch (Exception)
