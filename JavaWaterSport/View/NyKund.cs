@@ -88,6 +88,7 @@ namespace JavaWaterSport.View
 
             updateListView();
             updateDykListView();
+            updateBokListView();
         }         
 
         private void updateListView()
@@ -131,8 +132,8 @@ namespace JavaWaterSport.View
             for (int i = 0; i < bokList.Count(); i++)
             {
                 columns[0] = bokList.Get(i).ID.ToString();
-                columns[1] = kundList.Get(bokList.Get(i).KundID).Namn; 
-                columns[2] = dykList.Get(bokList.Get(i).KursID).getDykinstruktör();
+                columns[1] = bokList.Get(i).KundID.ToString();
+                columns[2] = bokList.Get(i).KursID.ToString();
                 item = new ListViewItem(columns);
                 lvwBokningar.Items.Add(item);
             }
@@ -195,14 +196,14 @@ namespace JavaWaterSport.View
                 MessageBox.Show("Markera en bokning för att radera!");
             }
         }
-        
+
         private void lvwKunder_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 tbxNamn.Clear();
                 tbxPersonligID.Clear();
-                string kundID = lvwKunder.SelectedItems[2].Text;
+                string kundID = lvwKunder.SelectedItems[0].Text;
                 Kund kund = kundList.Find(kundID);
                 tbxNamn.Text = kund.Namn;
                 tbxPersonligID.Text = kund.PersonligID;
@@ -219,7 +220,7 @@ namespace JavaWaterSport.View
         {
             try
             {
-                string kursID = lvwDykarkurs.SelectedItems[2].Text;
+                string kursID = lvwDykarkurs.SelectedItems[0].Text;
                 lblKursID.Text = kursID;               
             }
             catch (Exception)
