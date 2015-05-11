@@ -74,7 +74,7 @@ namespace JavaWaterSport.View
             //Lägg till kolummner
             lvwDykarkurs.Columns.Add("ID", -2, HorizontalAlignment.Left);
             lvwDykarkurs.Columns.Add("Tid     ", -2, HorizontalAlignment.Left);
-            lvwDykarkurs.Columns.Add("Dykinstruktör", -2, HorizontalAlignment.Left);
+            lvwDykarkurs.Columns.Add("Dykinstruktör  ", -2, HorizontalAlignment.Left);
             lvwDykarkurs.Columns.Add("Datum", -2, HorizontalAlignment.Left);
 
             //Egenskaper för boknings-listview
@@ -83,8 +83,8 @@ namespace JavaWaterSport.View
 
             //Lägg till kolummner
             lvwBokningar.Columns.Add("ID", -2, HorizontalAlignment.Left);
-            lvwBokningar.Columns.Add("Kund ID", -2, HorizontalAlignment.Left);
-            lvwBokningar.Columns.Add("Kurs ID", -2, HorizontalAlignment.Left);
+            lvwBokningar.Columns.Add("Kund     ", -2, HorizontalAlignment.Left);
+            lvwBokningar.Columns.Add("Kurs     ", -2, HorizontalAlignment.Left);
 
             updateListView();
             updateDykListView();
@@ -132,8 +132,8 @@ namespace JavaWaterSport.View
             for (int i = 0; i < bokList.Count(); i++)
             {
                 columns[0] = bokList.Get(i).ID.ToString();
-                columns[1] = bokList.Get(i).KundID.ToString();
-                columns[2] = bokList.Get(i).KursID.ToString();
+                columns[1] = bokList.Get(i).KundID;
+                columns[2] = bokList.Get(i).KursID;
                 item = new ListViewItem(columns);
                 lvwBokningar.Items.Add(item);
             }
@@ -173,7 +173,7 @@ namespace JavaWaterSport.View
         {
             try
             {
-                Dykarkurs_boka item = new Dykarkurs_boka(Convert.ToInt32(lblKundID.Text), Convert.ToInt32(lblKursID.Text));
+                Dykarkurs_boka item = new Dykarkurs_boka(lblKundID.Text, lblKursID.Text);
                 bokList.Add(item);
             }
             catch (Exception)
@@ -207,7 +207,7 @@ namespace JavaWaterSport.View
                 Kund kund = kundList.Find(kundID);
                 tbxNamn.Text = kund.Namn;
                 tbxPersonligID.Text = kund.PersonligID;
-                lblKundID.Text = kundID;
+                lblKundID.Text = kund.Namn;
 
             }
             catch(Exception)
@@ -221,9 +221,18 @@ namespace JavaWaterSport.View
             try
             {
                 string kursID = lvwDykarkurs.SelectedItems[0].Text;
-                lblKursID.Text = kursID;               
+                Dykarkurs kurs = dykList.Find(kursID);
+                lblKursID.Text = kurs.getDykinstruktör();   
             }
             catch (Exception)
+            {
+                
+            }
+        }
+
+        private void btnSorteraBokingar_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < bokList.Count(); i++)
             {
                 
             }

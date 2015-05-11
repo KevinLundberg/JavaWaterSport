@@ -10,8 +10,8 @@ namespace JavaWaterSport.Model
     class Dykarkurs_boka
     {
         private int id;
-        private int kundId;
-        private int kursId;
+        private string kundId;
+        private string kursId;
 
         public int ID
         {
@@ -19,19 +19,19 @@ namespace JavaWaterSport.Model
             set { id = value; }
         }
 
-        public int KundID
+        public string KundID
         {
             get { return kundId; }
             set { kundId = value; }
         }
 
-        public int KursID
+        public string KursID
         {
             get { return kursId; }
             set { kursId = value; }
         }
 
-        public Dykarkurs_boka(int kundID, int kursID)
+        public Dykarkurs_boka(string kundID, string kursID)
         {
             this.kundId = kundID;
             this.kursId = kursID;

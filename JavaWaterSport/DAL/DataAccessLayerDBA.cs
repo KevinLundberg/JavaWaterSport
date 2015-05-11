@@ -41,7 +41,7 @@ namespace JavaWaterSport.DAL
             sqlList.Add("DROP TABLE [dbo].[Dykarkurs_boka];");
             sqlList.Add("CREATE TABLE [dbo].[Kund] ([Id] INT NOT NULL, [PersonligID] VARCHAR (50) NULL, [Namn] VARCHAR (50) NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");            
             sqlList.Add("CREATE TABLE [dbo].[Dykarkurs] ([Id] INT NOT NULL, [Tid] VARCHAR (50) NULL, [Dykinstruktör] VARCHAR (50) NULL, [Datum] VARCHAR (50) NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");
-            sqlList.Add("CREATE TABLE [dbo].[Dykarkurs_boka] ([Id] INT NOT NULL, [KundID] INT NOT NULL, [KursID] INT NOT NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");   
+            sqlList.Add("CREATE TABLE [dbo].[Dykarkurs_boka] ([Id] INT NOT NULL, [KundID]  VARCHAR (50) NULL, [KursID]  VARCHAR (50) NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");   
 
             SqlCommand cmd;
             foreach (var sql in sqlList)
