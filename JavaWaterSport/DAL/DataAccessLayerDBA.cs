@@ -26,7 +26,7 @@ namespace JavaWaterSport.DAL
 
             msqlConnection.Open();
 
-            //CreateIfNotExists();
+            CreateIfNotExists();
 
             msqlConnection.Close();
         }
