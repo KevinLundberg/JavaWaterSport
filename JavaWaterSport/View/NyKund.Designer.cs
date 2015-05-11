@@ -42,8 +42,8 @@
             this.btnSorteraBokingar = new System.Windows.Forms.Button();
             this.btnBokaDykarkurs = new System.Windows.Forms.Button();
             this.btnTaBortKund = new System.Windows.Forms.Button();
-            this.lblKursID = new System.Windows.Forms.Label();
-            this.lblKundID = new System.Windows.Forms.Label();
+            this.lblKurs = new System.Windows.Forms.Label();
+            this.lblKund = new System.Windows.Forms.Label();
             this.btnTaBortBokning = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -178,23 +178,25 @@
             this.btnTaBortKund.UseVisualStyleBackColor = true;
             this.btnTaBortKund.Click += new System.EventHandler(this.btnTaBortKund_Click);
             // 
-            // lblKursID
+            // lblKurs
             // 
-            this.lblKursID.AutoSize = true;
-            this.lblKursID.Location = new System.Drawing.Point(309, 13);
-            this.lblKursID.Name = "lblKursID";
-            this.lblKursID.Size = new System.Drawing.Size(39, 13);
-            this.lblKursID.TabIndex = 21;
-            this.lblKursID.Text = "KursID";
+            this.lblKurs.AutoSize = true;
+            this.lblKurs.Location = new System.Drawing.Point(309, 13);
+            this.lblKurs.Name = "lblKurs";
+            this.lblKurs.Size = new System.Drawing.Size(28, 13);
+            this.lblKurs.TabIndex = 21;
+            this.lblKurs.Text = "Kurs";
+            this.lblKurs.Visible = false;
             // 
-            // lblKundID
+            // lblKund
             // 
-            this.lblKundID.AutoSize = true;
-            this.lblKundID.Location = new System.Drawing.Point(309, 41);
-            this.lblKundID.Name = "lblKundID";
-            this.lblKundID.Size = new System.Drawing.Size(43, 13);
-            this.lblKundID.TabIndex = 22;
-            this.lblKundID.Text = "KundID";
+            this.lblKund.AutoSize = true;
+            this.lblKund.Location = new System.Drawing.Point(309, 41);
+            this.lblKund.Name = "lblKund";
+            this.lblKund.Size = new System.Drawing.Size(32, 13);
+            this.lblKund.TabIndex = 22;
+            this.lblKund.Text = "Kund";
+            this.lblKund.Visible = false;
             // 
             // btnTaBortBokning
             // 
@@ -212,8 +214,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 626);
             this.Controls.Add(this.btnTaBortBokning);
-            this.Controls.Add(this.lblKundID);
-            this.Controls.Add(this.lblKursID);
+            this.Controls.Add(this.lblKund);
+            this.Controls.Add(this.lblKurs);
             this.Controls.Add(this.btnTaBortKund);
             this.Controls.Add(this.btnBokaDykarkurs);
             this.Controls.Add(this.btnSorteraBokingar);
@@ -251,8 +253,8 @@
         private System.Windows.Forms.Button btnSorteraBokingar;
         private System.Windows.Forms.Button btnBokaDykarkurs;
         private System.Windows.Forms.Button btnTaBortKund;
-        private System.Windows.Forms.Label lblKursID;
-        private System.Windows.Forms.Label lblKundID;
+        private System.Windows.Forms.Label lblKurs;
+        private System.Windows.Forms.Label lblKund;
         private System.Windows.Forms.Button btnTaBortBokning;
     }
 }

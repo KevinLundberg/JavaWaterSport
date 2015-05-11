@@ -173,7 +173,7 @@ namespace JavaWaterSport.View
         {
             try
             {
-                Dykarkurs_boka item = new Dykarkurs_boka(lblKundID.Text, lblKursID.Text);
+                Dykarkurs_boka item = new Dykarkurs_boka(lblKund.Text, lblKurs.Text);
                 bokList.Add(item);
             }
             catch (Exception)
@@ -207,7 +207,7 @@ namespace JavaWaterSport.View
                 Kund kund = kundList.Find(kundID);
                 tbxNamn.Text = kund.Namn;
                 tbxPersonligID.Text = kund.PersonligID;
-                lblKundID.Text = kund.Namn;
+                lblKund.Text = kund.Namn;
 
             }
             catch(Exception)
@@ -222,7 +222,7 @@ namespace JavaWaterSport.View
             {
                 string kursID = lvwDykarkurs.SelectedItems[0].Text;
                 Dykarkurs kurs = dykList.Find(kursID);
-                lblKursID.Text = kurs.getDykinstruktör();   
+                lblKurs.Text = kurs.getDykinstruktör();   
             }
             catch (Exception)
             {
