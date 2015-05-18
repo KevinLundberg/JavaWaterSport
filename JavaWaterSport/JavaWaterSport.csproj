@@ -109,7 +109,6 @@
     <EmbeddedResource Include="View\NyUtrustning.resx">
       <DependentUpon>NyUtrustning.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Debug\DykarkursLista.DAT" />
     <None Include="bin\Debug\KundLista.DAT" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

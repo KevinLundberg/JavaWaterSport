@@ -39,7 +39,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.lvwBokningar = new System.Windows.Forms.ListView();
             this.lvwDykarkurs = new System.Windows.Forms.ListView();
-            this.btnSorteraBokingar = new System.Windows.Forms.Button();
             this.btnBokaDykarkurs = new System.Windows.Forms.Button();
             this.btnTaBortKund = new System.Windows.Forms.Button();
             this.lblKurs = new System.Windows.Forms.Label();
@@ -148,16 +147,6 @@
             this.lvwDykarkurs.View = System.Windows.Forms.View.Details;
             this.lvwDykarkurs.SelectedIndexChanged += new System.EventHandler(this.lvwDykarkurs_SelectedIndexChanged);
             // 
-            // btnSorteraBokingar
-            // 
-            this.btnSorteraBokingar.Location = new System.Drawing.Point(436, 287);
-            this.btnSorteraBokingar.Name = "btnSorteraBokingar";
-            this.btnSorteraBokingar.Size = new System.Drawing.Size(131, 23);
-            this.btnSorteraBokingar.TabIndex = 18;
-            this.btnSorteraBokingar.Text = "Sortera bokningar";
-            this.btnSorteraBokingar.UseVisualStyleBackColor = true;
-            this.btnSorteraBokingar.Click += new System.EventHandler(this.btnSorteraBokingar_Click);
-            // 
             // btnBokaDykarkurs
             // 
             this.btnBokaDykarkurs.Location = new System.Drawing.Point(436, 591);
@@ -200,9 +189,9 @@
             // 
             // btnTaBortBokning
             // 
-            this.btnTaBortBokning.Location = new System.Drawing.Point(581, 287);
+            this.btnTaBortBokning.Location = new System.Drawing.Point(436, 287);
             this.btnTaBortBokning.Name = "btnTaBortBokning";
-            this.btnTaBortBokning.Size = new System.Drawing.Size(131, 23);
+            this.btnTaBortBokning.Size = new System.Drawing.Size(276, 23);
             this.btnTaBortBokning.TabIndex = 23;
             this.btnTaBortBokning.Text = "Ta bort bokning";
             this.btnTaBortBokning.UseVisualStyleBackColor = true;
@@ -218,7 +207,6 @@
             this.Controls.Add(this.lblKurs);
             this.Controls.Add(this.btnTaBortKund);
             this.Controls.Add(this.btnBokaDykarkurs);
-            this.Controls.Add(this.btnSorteraBokingar);
             this.Controls.Add(this.lvwDykarkurs);
             this.Controls.Add(this.lvwBokningar);
             this.Controls.Add(this.label8);
@@ -250,7 +238,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListView lvwBokningar;
         private System.Windows.Forms.ListView lvwDykarkurs;
-        private System.Windows.Forms.Button btnSorteraBokingar;
         private System.Windows.Forms.Button btnBokaDykarkurs;
         private System.Windows.Forms.Button btnTaBortKund;
         private System.Windows.Forms.Label lblKurs;

@@ -18,7 +18,7 @@ namespace JavaWaterSport.View
     {
         private KundList kundList;
         private DykarkursList dykList;
-        private BokningsList bokList;                
+        private BokningsList bokList;
 
         public NyKund()
         {
@@ -35,7 +35,7 @@ namespace JavaWaterSport.View
             }
 
             InitializeComponent();
-            dykList.Updated += new EventHandler(dykService_Update);            
+            dykList.Updated += new EventHandler(dykService_Update);
             kundList.Updated += new EventHandler(kundService_Update);
             bokList.Updated += new EventHandler(bokList_Update);
             initListView();
@@ -45,10 +45,10 @@ namespace JavaWaterSport.View
         {
             updateBokListView();
         }
-                
+
         private void dykService_Update(object sender, EventArgs e)
         {
- 	        updateDykListView();
+            updateDykListView();
         }
 
         private void kundService_Update(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace JavaWaterSport.View
             updateListView();
             updateDykListView();
             updateBokListView();
-        }         
+        }
 
         private void updateListView()
         {
@@ -104,7 +104,7 @@ namespace JavaWaterSport.View
                 columns[2] = kundList.Get(i).Namn;
                 item = new ListViewItem(columns);
                 lvwKunder.Items.Add(item);
-            }            
+            }
         }
 
         private void updateDykListView()
@@ -131,11 +131,22 @@ namespace JavaWaterSport.View
 
             for (int i = 0; i < bokList.Count(); i++)
             {
-                columns[0] = bokList.Get(i).ID.ToString();
-                columns[1] = bokList.Get(i).KundID;
-                columns[2] = bokList.Get(i).KursID;
-                item = new ListViewItem(columns);
-                lvwBokningar.Items.Add(item);
+                try
+                {
+                    if (bokList.Get(i).KursID == lblKurs.Text)
+                    {
+                        columns[0] = bokList.Get(i).ID.ToString();
+                        columns[1] = bokList.Get(i).KundID;
+                        columns[2] = bokList.Get(i).KursID;
+                        item = new ListViewItem(columns);
+                        lvwBokningar.Items.Add(item);
+                    }
+                }
+                catch (Exception)
+                {
+
+                    
+                }
             }
         }
 
@@ -148,7 +159,7 @@ namespace JavaWaterSport.View
                 kundList.Remove(kund);
 
                 tbxNamn.Clear();
-                tbxPersonligID.Clear();                
+                tbxPersonligID.Clear();
             }
 
             catch
@@ -177,7 +188,7 @@ namespace JavaWaterSport.View
                 bokList.Add(item);
             }
             catch (Exception)
-            {                
+            {
                 MessageBox.Show("Markera i respektive lista");
             }
         }
@@ -188,7 +199,7 @@ namespace JavaWaterSport.View
             {
                 string bokningsID = lvwBokningar.SelectedItems[0].Text;
                 Dykarkurs_boka bokning = bokList.Find(bokningsID);
-                bokList.Remove(bokning);                
+                bokList.Remove(bokning);
             }
 
             catch
@@ -210,9 +221,9 @@ namespace JavaWaterSport.View
                 lblKund.Text = kund.Namn;
 
             }
-            catch(Exception)
+            catch (Exception)
             {
-               
+
             }
         }
 
@@ -222,20 +233,13 @@ namespace JavaWaterSport.View
             {
                 string kursID = lvwDykarkurs.SelectedItems[0].Text;
                 Dykarkurs kurs = dykList.Find(kursID);
-                lblKurs.Text = kurs.getDykinstruktör();   
+                lblKurs.Text = kurs.getDykinstruktör();
+                updateBokListView();
             }
             catch (Exception)
             {
-                
+
             }
         }
-
-        private void btnSorteraBokingar_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < bokList.Count(); i++)
-            {
-                
-            }
-        }        
     }
 }
