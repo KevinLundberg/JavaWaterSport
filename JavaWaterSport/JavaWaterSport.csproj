@@ -54,7 +54,6 @@
     <Compile Include="DAL\BinarySerialization.cs" />
     <Compile Include="DAL\DataAccessLayerDBA.cs" />
     <Compile Include="Model\Dykarkurs.cs" />
-    <Compile Include="Model\Dykarkurs_kopia.cs" />
     <Compile Include="Model\Dykarkurs_boka.cs" />
     <Compile Include="Model\Kund.cs" />
     <Compile Include="Model\Utrustning.cs" />
@@ -110,6 +109,7 @@
       <DependentUpon>NyUtrustning.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\KundLista.DAT" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
